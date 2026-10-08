@@ -207,7 +207,18 @@ export function Navbar({ company, extras }: { company: NavCompany; extras: NavEx
         )}
       >
         <nav aria-label="Primary" className={cn("container-x flex items-center justify-between gap-6 transition-[height] duration-700 ease-[var(--ease-out-expo)]", scrolled ? "h-[68px]" : "h-[88px]")}>
-          <Link href={href("/")} aria-label={`${company.name} — ${dict.nav.home}`} className="relative z-10">
+          <Link
+            href={href("/")}
+            aria-label={`${company.name} — ${dict.nav.home}`}
+            className="relative z-10"
+            onClick={(e) => {
+              if (isHome) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                setOpen(false);
+              }
+            }}
+          >
             <Logo name={company.name} logoUrl={company.logoUrl} logoDarkUrl={company.logoDarkUrl} tone={open || (!scrolled && isHome) ? "light" : "dark"} height={scrolled ? 30 : 36} className="transition-[height] duration-500" />
           </Link>
 

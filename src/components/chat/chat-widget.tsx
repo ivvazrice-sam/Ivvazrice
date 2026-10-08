@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
-import { Mail, MessageCircle, Phone, Send, X } from "lucide-react";
+import { Bot, Mail, MessageCircle, Phone, Send, Sparkles, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { whatsappHref } from "@/lib/utils";
 import { SocialIcon } from "@/components/ui/social-icon";
@@ -102,11 +102,12 @@ export function ChatWidget({ company }: { company: { name: string; whatsapp: str
 
   return (
     <>
+      {/* AI chat — top */}
       <motion.button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        aria-label={open ? "Close chat" : "Open chat"}
-        className="pointer-events-auto fixed bottom-5 right-5 z-40 grid size-14 place-items-center rounded-full bg-ink text-pearl shadow-[0_18px_40px_-14px_rgba(0,0,0,0.6)] transition-transform hover:scale-105 sm:bottom-6 sm:right-6 sm:size-16"
+        aria-label={open ? "Close chat" : "Open AI chat"}
+        className="pointer-events-auto fixed bottom-20 right-5 z-40 grid size-12 place-items-center rounded-full bg-ink text-pearl shadow-[0_14px_30px_-10px_rgba(0,0,0,0.55)] ring-1 ring-gold/30 transition-transform hover:scale-105 sm:bottom-24 sm:right-6 sm:size-14"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.5, ease: EASE }}
@@ -114,18 +115,39 @@ export function ChatWidget({ company }: { company: { name: string; whatsapp: str
         <AnimatePresence mode="wait" initial={false}>
           {open ? (
             <motion.span key="x" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
-              <X className="size-6" />
+              <X className="size-5" />
             </motion.span>
           ) : (
-            <motion.span key="chat" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
-              <MessageCircle className="size-6" />
+            <motion.span key="chat" className="relative" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
+              <Bot className="size-5" />
+              <Sparkles className="absolute -right-1 -top-1 size-2.5 text-gold" />
             </motion.span>
           )}
         </AnimatePresence>
         {!open && (
-          <span className="pointer-events-none absolute inset-0 animate-ping rounded-full bg-gold/40" aria-hidden />
+          <span className="pointer-events-none absolute inset-0 animate-ping rounded-full bg-gold/30" aria-hidden />
         )}
       </motion.button>
+
+      {/* WhatsApp — bottom */}
+      <AnimatePresence>
+        {wa && !open && (
+          <motion.a
+            key="wa-float"
+            href={wa}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat on WhatsApp"
+            className="pointer-events-auto fixed bottom-5 right-5 z-40 grid size-12 place-items-center rounded-full bg-[#25D366] text-white shadow-[0_14px_30px_-10px_rgba(0,0,0,0.55)] transition-transform hover:scale-105 sm:bottom-6 sm:right-6 sm:size-14"
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0, opacity: 0 }}
+            transition={{ delay: 0.1, duration: 0.4, ease: EASE }}
+          >
+            <SocialIcon platform="whatsapp" className="size-5 sm:size-6" />
+          </motion.a>
+        )}
+      </AnimatePresence>
 
       <AnimatePresence>
         {open && (

@@ -49,7 +49,9 @@ export function LiveCounter({ items }: { items: Item[] }) {
       <div className="relative mx-auto grid max-w-7xl grid-cols-2 gap-y-10 px-6 sm:grid-cols-4 sm:gap-8">
         {items.map((it, i) => {
           const Icon = ICONS[it.icon];
-          const numericValue = typeof it.value === "number" ? it.value : Number(String(it.value).replace(/[^\d]/g, ""));
+          const raw = String(it.value);
+          const isPureNumber = typeof it.value === "number" || /^\d+$/.test(raw);
+          const numericValue = isPureNumber ? Number(raw.replace(/[^\d]/g, "")) : NaN;
           const isNumeric = Number.isFinite(numericValue) && numericValue > 0;
           return (
             <motion.div

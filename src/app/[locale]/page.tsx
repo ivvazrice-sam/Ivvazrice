@@ -34,14 +34,20 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         }}
       />
       <TrustStrip certifications={collections.certifications} trustItems={collections.trustItems} dict={{ eyebrow: "Verified · Audited · Trusted" }} />
-      <LiveCounter
-        items={[
-          { label: "Export countries", value: collections.exportCountries.filter((c) => c.published).length, suffix: "+", icon: "globe" },
-          { label: "Rice varieties", value: collections.products.filter((p) => p.published).length, icon: "package" },
-          { label: "Certifications", value: collections.certifications.filter((c) => c.published).length, icon: "shield" },
-          { label: "Years in exports", value: company.foundedYear && /^\d{4}$/.test(company.foundedYear) ? Math.max(1, new Date().getFullYear() - Number(company.foundedYear)) : 10, suffix: "+", icon: "timer" },
-        ]}
-      />
+      {(() => {
+        const iconFor = (label: string): "globe" | "package" | "shield" | "timer" => {
+          const l = label.toLowerCase();
+          if (l.includes("countr") || l.includes("export")) return "globe";
+          if (l.includes("cert") || l.includes("iso") || l.includes("audit")) return "shield";
+          if (l.includes("capacity") || l.includes("tonn") || l.includes("mt") || l.includes("product") || l.includes("variet")) return "package";
+          return "timer";
+        };
+        const items = company.stats
+          .filter((s) => s.value && s.value.trim() !== "")
+          .slice(0, 4)
+          .map((s) => ({ label: s.label, value: s.value, prefix: s.prefix, suffix: s.suffix, icon: iconFor(s.label) }));
+        return items.length ? <LiveCounter items={items} /> : null;
+      })()}
       <AboutSection content={content} dict={dict} moreHref={href("/about")} />
       <ProductsSection content={content} dict={dict} locale={locale} limit={8} />
       <TraceabilitySection />
