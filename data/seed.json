@@ -1,0 +1,1685 @@
+{
+  "company": {
+    "name": "Ivvaz",
+    "legalName": "Ivvaz",
+    "tagline": "At the confluence of heritage and modern precision — Premium Basmati Rice.",
+    "shortDescription": "Ivvaz is a premier rice milling and export company from India, delivering premium basmati rice to 95+ countries. We combine traditional expertise with world-class processing to serve retailers, restaurants, and distributors with uncompromising quality.",
+    "story": "Founded with a passion for exceptional rice, Ivvaz emerged from decades of family expertise in rice cultivation and milling. Our journey began in the fertile basmati-growing regions of northern India, where generations of knowledge about grain quality, cooking character, and premium processing have been passed down.\n\nToday, Ivvaz operates a state-of-the-art milling facility with 250+ MT per day processing capacity and 9,000 MT storage. We handpick paddy from trusted farmer networks, process it through advanced cleaning, de-stoning, milling, optical sorting, and polishing lines, then package it with full traceability for export to 25+ countries worldwide.\n\nOur commitment is simple: deliver the finest Indian basmati rice to premium retail chains, fine dining restaurants, foodservice operations, and discerning importers across the globe — every single batch, every single shipment.",
+    "logoUrl": "/brand/ivvaz-white.png",
+    "logoDarkUrl": "/brand/ivvaz-green.png",
+    "foundedYear": "2000",
+    "heroHeadline": "Every grain tells a story. Every batch earns your trust.",
+    "heroSubheadline": "From Indian fields to global tables — Ivvaz delivers premium basmati rice shaped by heritage, precision, and the pursuit of perfection in every grain.",
+    "heroVideoUrl": "",
+    "heroPosterUrl": "",
+    "aboutMediaUrl": "",
+    "aboutMediaType": "image",
+    "address": "Industrial Area, Haryana, India",
+    "phone": "+91 98765 43210",
+    "email": "sales@ivvaz.com",
+    "whatsapp": "+91 98765 43210",
+    "businessHours": "Mon – Sat, 09:00 – 18:00 IST",
+    "mapEmbedUrl": "",
+    "mapLink": "",
+    "originLabel": "India",
+    "originCountry": "India",
+    "originLat": 22.8,
+    "originLng": 70,
+    "originPort": "Mundra Port, Gujarat",
+    "highlights": [
+      {
+        "title": "Our Story",
+        "text": "Built on generations of rice expertise, Ivvaz combines traditional knowledge with modern milling to deliver premium basmati worldwide."
+      },
+      {
+        "title": "Experience",
+        "text": "Decades of expertise in rice milling, grading, and global export operations with a team of industry veterans."
+      },
+      {
+        "title": "Manufacturing Capability",
+        "text": "250+ MT per day processing capacity across multiple milling lines, serving 8 premium rice varieties."
+      },
+      {
+        "title": "Processing Infrastructure",
+        "text": "State-of-the-art plant with 9,000 MT storage capacity, optical sorting, and advanced grading technology."
+      },
+      {
+        "title": "Quality Commitment",
+        "text": "ISO-certified quality control with full traceability from paddy intake to export container — every batch tested and verified."
+      },
+      {
+        "title": "Export Capability",
+        "text": "Trusted shipping partners, complete export documentation, and proven track record of on-time delivery to global markets."
+      },
+      {
+        "title": "Global Vision",
+        "text": "Reaching 25+ countries across Asia, Middle East, Europe, Africa, and the Americas with premium Indian basmati."
+      }
+    ],
+    "stats": [
+      {
+        "label": "Daily Capacity",
+        "value": "750",
+        "suffix": " MT"
+      },
+      {
+        "label": "Annual Exports",
+        "value": "275K",
+        "suffix": " MT"
+      },
+      {
+        "label": "Countries Served",
+        "value": "95",
+        "suffix": "+"
+      },
+      {
+        "label": "Certifications",
+        "value": "13",
+        "suffix": ""
+      }
+    ]
+  },
+  "settings": {
+    "showPlaceholders": false,
+    "seoTitle": "Ivvaz — Premium Basmati & Non-Basmati Rice Exporter from India",
+    "seoDescription": "Ivvaz is a rice milling and export company from India. Explore our basmati and non-basmati rice range, processing, quality control and global export capability.",
+    "seoKeywords": [
+      "Rice Exporter",
+      "Rice Mill",
+      "Indian Rice Exporter",
+      "Rice Supplier",
+      "Rice Export Company"
+    ],
+    "ogImageUrl": "",
+    "twitterHandle": "",
+    "exportHeadline": "Premium basmati, delivered across 95+ countries.",
+    "exportIntro": "From Mundra and Nhava Sheva ports, Ivvaz serves importers, distributors, retailers, and food service operators across 95+ countries. Our export team provides white-glove support — from inquiry to delivery — with complete documentation, timely shipments, and consistent quality.",
+    "shippingCapability": "Full container load (FCL) and less than container load (LCL) shipments. Working with major shipping lines including Maersk, MSC, and Hapag-Lloyd. Flexible with FOB, CFR, CIF, and DAP incoterms.",
+    "internationalSupply": "Year-round consistent supply with long-term contracts available. Complete export documentation including Phytosanitary, Certificate of Origin, Fumigation, and inspection certificates. Dedicated support team for buyers.",
+    "majorMarketsNote": "Our major markets include UAE, Saudi Arabia, Iran, Iraq, Kuwait, Yemen, Oman, UK, Germany, Netherlands, USA, Canada, Australia, Malaysia, Singapore, and various African nations.",
+    "qualityIntro": "Every batch moves through a controlled sequence of checks, from raw paddy to the sealed export container.",
+    "privacyPolicy": "Ivvaz respects your privacy. We collect personal information (name, email, phone, company) through inquiry and contact forms solely to respond to your business inquiries and provide product information. We do not share your data with third parties. Information is retained for the duration necessary to serve your inquiry and comply with legal requirements. You may request data deletion at any time by emailing sales@ivvaz.com.",
+    "terms": "By using the Ivvaz website, you agree to use it for lawful purposes only. All content, including text, images, product information, and branding, is the property of Ivvaz and may not be reproduced without permission. Product specifications are indicative and may vary. For current prices, availability, and specifications, please contact our sales team. We reserve the right to update terms and content at any time.",
+    "imageAbout": "",
+    "imageProducts": "",
+    "imagePackaging": "",
+    "imageProcessing": "",
+    "imageQuality": "",
+    "imageExport": "",
+    "imageInfrastructure": "",
+    "imageVideos": "",
+    "imageContact": "",
+    "imageQuote": ""
+  },
+  "collections": {
+    "products": [
+      {
+        "id": "p1",
+        "sortOrder": 1,
+        "published": true,
+        "sampleData": false,
+        "featured": true,
+        "images": [
+          {
+            "url": "/products/royale.png",
+            "alt": "ROYALE Premium Basmati Rice - Luxury Package"
+          }
+        ],
+        "videos": [],
+        "specifications": [],
+        "packagingOptions": [
+          "Consumer packs",
+          "Bulk bags",
+          "Export packaging",
+          "Private label"
+        ],
+        "availableQuantities": "25 kg bags, 30 kg bags, Custom bulk quantities",
+        "exportAvailability": "Year-round supply available. MOQ: 10 MT. Shipping within 15-20 days",
+        "qualityInfo": "Basmati Grade: 1121 Premium. Tested for pesticides and heavy metals. ISO certified. SGS certified.",
+        "applications": [
+          "Michelin-starred fine dining",
+          "Luxury hotel chains",
+          "Premium specialty retail",
+          "Gourmet food brands"
+        ],
+        "grainLength": "8.50–8.65 mm",
+        "texture": "Exceptionally firm & separate",
+        "appearance": "Ultra-slender, premium white",
+        "slug": "royale-premium-basmati",
+        "name": "ROYALE",
+        "variety": "ROYALE",
+        "category": "Basmati",
+        "grainTone": "white",
+        "image": 8451709,
+        "shortDescription": "The Finest 1401 Steam Basmati Rice.",
+        "overview": "Crafted from the finest 1401 Basmati rice grains, Royale features exceptionally long, slender grains with the authentic aroma, delicate texture, and distinctive taste of true Basmati. Carefully steam-processed to preserve its natural fragrance and character, every grain delivers an elegant, fluffy texture and a truly royal dining experience.",
+        "cookedLength": "22–24 mm",
+        "characterTags": [
+          "Ultra-long grain",
+          "Premium aroma",
+          "Exceptional elongation",
+          "Luxury segment",
+          "Perfect separation"
+        ],
+        "marketTags": [
+          "Fine dining",
+          "Luxury retail",
+          "Premium specialty"
+        ],
+        "expressions": [
+          {
+            "name": "Raw",
+            "tone": "#efe8d8",
+            "toneLabel": "Natural white",
+            "description": "Milled from aged basmati paddy — natural aroma and premium elongation.",
+            "avgLength": "8.50–8.60 mm",
+            "cookedLength": "22–23 mm",
+            "whiteness": "40–42",
+            "moisture": "12.5% max",
+            "broken": "0.5% max",
+            "imageUrl": "https://images.pexels.com/photos/36346840/pexels-photo-36346840.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          },
+          {
+            "name": "Steam",
+            "tone": "#f8f5ec",
+            "toneLabel": "Brilliant white",
+            "description": "Steam-treated for a luminous finish and optimal separation in premium settings.",
+            "avgLength": "8.60–8.65 mm",
+            "cookedLength": "23–24 mm",
+            "whiteness": "35–37",
+            "moisture": "12.5% max",
+            "broken": "0.5% max",
+            "imageUrl": "https://images.pexels.com/photos/36346843/pexels-photo-36346843.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "sortOrder": 2,
+        "published": true,
+        "sampleData": false,
+        "featured": true,
+        "images": [
+          {
+            "url": "/products/imperial.png",
+            "alt": "IMPERIAL Extra Long Grain Rice - Premium Package"
+          }
+        ],
+        "videos": [],
+        "specifications": [],
+        "packagingOptions": [
+          "Consumer packs",
+          "Bulk bags",
+          "Export packaging",
+          "Private label"
+        ],
+        "availableQuantities": "25 kg bags, 30 kg bags, Bulk containers",
+        "exportAvailability": "Year-round. MOQ: 15 MT. 12-18 days delivery",
+        "qualityInfo": "Grade: Extra Long Premium. Whiteness: 39-41. Moisture: 12.5% max. Certified organic option available.",
+        "applications": [
+          "Premium restaurant chains",
+          "Upscale retail",
+          "Premium catering"
+        ],
+        "grainLength": "8.40–8.55 mm",
+        "texture": "Firm, premium separation",
+        "appearance": "Extra-long, premium-white",
+        "slug": "imperial-extra-long-grain",
+        "name": "IMPERIAL",
+        "variety": "IMPERIAL",
+        "category": "Basmati",
+        "grainTone": "white",
+        "image": 30640618,
+        "shortDescription": "Finest 1509 Steam Basmati Rice — Imperial Biryani Rice.",
+        "overview": "Selected from the finest 1509 Basmati rice, Imperial is celebrated for its exceptionally long, slender grains and remarkable length after cooking. Steam-processed to preserve its natural character, it delivers a beautifully fluffy texture, delicate aroma, and rich, satisfying taste in every serving.\n\nDesigned as an Imperial Biryani Rice, its long, separate grains and excellent cooking performance make it an ideal choice for biryani and pulao. Every grain cooks beautifully, stays distinct, and brings an elegant presentation to every dish.",
+        "cookedLength": "21–23 mm",
+        "characterTags": [
+          "Extra-long grain",
+          "Premium elongation",
+          "Pronounced aroma",
+          "Firm separation",
+          "Premium quality"
+        ],
+        "marketTags": [
+          "Premium mainstream",
+          "Fine dining",
+          "Restaurant chains"
+        ],
+        "expressions": [
+          {
+            "name": "Raw",
+            "tone": "#efe8d8",
+            "toneLabel": "Natural white",
+            "description": "Aged basmati with natural aroma and consistent elongation.",
+            "avgLength": "8.40–8.50 mm",
+            "cookedLength": "21–22 mm",
+            "whiteness": "39–41",
+            "moisture": "12.5% max",
+            "broken": "1% max",
+            "imageUrl": "https://images.pexels.com/photos/36346840/pexels-photo-36346840.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          },
+          {
+            "name": "Steam",
+            "tone": "#f8f5ec",
+            "toneLabel": "Bright white",
+            "description": "Steam-treated for brightness and optimal cooking performance.",
+            "avgLength": "8.50–8.55 mm",
+            "cookedLength": "22–23 mm",
+            "whiteness": "34–36",
+            "moisture": "12.5% max",
+            "broken": "1% max",
+            "imageUrl": "https://images.pexels.com/photos/36346843/pexels-photo-36346843.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          }
+        ]
+      },
+      {
+        "id": "p3",
+        "sortOrder": 3,
+        "published": true,
+        "sampleData": false,
+        "featured": true,
+        "images": [
+          {
+            "url": "/products/pro.png",
+            "alt": "PRO Everyday Premium Rice - Quality Package"
+          }
+        ],
+        "videos": [],
+        "specifications": [],
+        "packagingOptions": [
+          "Consumer packs",
+          "Bulk bags",
+          "Export packaging",
+          "Private label"
+        ],
+        "availableQuantities": "5 kg, 10 kg, 25 kg, 30 kg bags + bulk",
+        "exportAvailability": "Year-round supply. MOQ: 20 MT. Standard delivery 15 days",
+        "qualityInfo": "Grade: Premium Everyday. Whiteness: 38-40. Broken max: 1.5%. Lab tested & certified.",
+        "applications": [
+          "Everyday households",
+          "Restaurant chains",
+          "Retail",
+          "Food service"
+        ],
+        "grainLength": "8.10–8.25 mm",
+        "texture": "Firm, separate",
+        "appearance": "Long, slender",
+        "slug": "pro-everyday-premium",
+        "name": "PRO",
+        "variety": "PRO",
+        "category": "Basmati",
+        "grainTone": "cream",
+        "image": 27543896,
+        "shortDescription": "Premium 1509 Steam Rice.",
+        "overview": "Made from carefully selected 1509 Steam Rice, Pro offers the character of premium steam rice at a more accessible price. With long, slender grains, a pleasing aroma, fluffy texture, and dependable cooking performance, it is an excellent choice for everyday premium meals.",
+        "cookedLength": "19–21 mm",
+        "characterTags": [
+          "Long grain",
+          "Good elongation",
+          "Gentle aroma",
+          "Reliable cooking",
+          "Firm & separate"
+        ],
+        "marketTags": [
+          "Premium mainstream",
+          "Everyday retail",
+          "Foodservice",
+          "Households"
+        ],
+        "expressions": [
+          {
+            "name": "Raw",
+            "tone": "#efe8d8",
+            "toneLabel": "Natural white",
+            "description": "Classic milled basmati with natural aroma.",
+            "avgLength": "8.10–8.20 mm",
+            "cookedLength": "19–20 mm",
+            "whiteness": "38–40",
+            "moisture": "12.5% max",
+            "broken": "1.5% max",
+            "imageUrl": "https://images.pexels.com/photos/36346840/pexels-photo-36346840.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          },
+          {
+            "name": "Steam",
+            "tone": "#f8f5ec",
+            "toneLabel": "Bright white",
+            "description": "Steam-treated for consistent cooking and separation.",
+            "avgLength": "8.20–8.25 mm",
+            "cookedLength": "20–21 mm",
+            "whiteness": "33–35",
+            "moisture": "12.5% max",
+            "broken": "1.5% max",
+            "imageUrl": "https://images.pexels.com/photos/36346843/pexels-photo-36346843.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          }
+        ]
+      },
+      {
+        "id": "p4",
+        "sortOrder": 4,
+        "published": true,
+        "sampleData": false,
+        "featured": true,
+        "images": [
+          {
+            "url": "/products/select.png",
+            "alt": "SELECT Fine Quality Rice - Premium Package"
+          }
+        ],
+        "videos": [],
+        "specifications": [],
+        "packagingOptions": [
+          "Consumer packs",
+          "Bulk bags",
+          "Export packaging",
+          "Private label"
+        ],
+        "availableQuantities": "10 kg, 25 kg, 30 kg bags, Bulk options",
+        "exportAvailability": "Available year-round. MOQ: 25 MT. Delivery 14-16 days",
+        "qualityInfo": "Grade: Fine Quality Premium. Whiteness: 37-39. Moisture: 12.5% max. ISO 9001 certified.",
+        "applications": [
+          "Quality-conscious retail",
+          "Catering",
+          "Restaurants"
+        ],
+        "grainLength": "7.90–8.05 mm",
+        "texture": "Soft, versatile",
+        "appearance": "Long grain, quality white",
+        "slug": "select-fine-quality",
+        "name": "SELECT",
+        "variety": "SELECT",
+        "category": "Basmati",
+        "grainTone": "white",
+        "image": 1624487,
+        "shortDescription": "Fine Steam Basmati Rice.",
+        "overview": "A smart choice for those who seek the authentic character of Basmati at an exceptional value. Select is crafted from carefully chosen 1509 Steam or Basmati Steam Tibar grains, offering long, slender grains, a naturally pleasing aroma, fluffy texture, and the distinctive taste associated with quality Basmati rice.\n\nDesigned for everyday premium cooking, Select delivers a satisfying Basmati experience at a more accessible price point — making it an ideal choice for households and food-service kitchens alike.",
+        "cookedLength": "18–20 mm",
+        "characterTags": [
+          "Long grain",
+          "Good aroma",
+          "Firm separation",
+          "Quality-focused",
+          "Reliable cooking"
+        ],
+        "marketTags": [
+          "Premium mainstream",
+          "Quality retail",
+          "Catering",
+          "Restaurants"
+        ],
+        "expressions": [
+          {
+            "name": "Steam",
+            "tone": "#f8f5ec",
+            "toneLabel": "Bright white",
+            "description": "Steam-treated for consistent performance and brightness.",
+            "avgLength": "7.90–8.05 mm",
+            "cookedLength": "18–20 mm",
+            "whiteness": "33–35",
+            "moisture": "12.5% max",
+            "broken": "2% max",
+            "imageUrl": "https://images.pexels.com/photos/36346843/pexels-photo-36346843.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          },
+          {
+            "name": "Sella",
+            "tone": "#e4cf9c",
+            "toneLabel": "Parboiled cream",
+            "description": "Parboiled for firmness and separation in bulk cooking.",
+            "avgLength": "7.95–8.05 mm",
+            "cookedLength": "18–20 mm",
+            "whiteness": "26–29",
+            "moisture": "12.0% max",
+            "broken": "2% max",
+            "imageUrl": "https://images.pexels.com/photos/7851798/pexels-photo-7851798.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          }
+        ]
+      },
+      {
+        "id": "p5",
+        "sortOrder": 5,
+        "published": true,
+        "sampleData": false,
+        "featured": true,
+        "images": [
+          {
+            "url": "/products/choice.png",
+            "alt": "CHOICE Trusted Quality Rice - Value Package"
+          }
+        ],
+        "videos": [],
+        "specifications": [],
+        "packagingOptions": [
+          "Consumer packs",
+          "Bulk bags",
+          "Export packaging",
+          "Private label"
+        ],
+        "availableQuantities": "25 kg, 30 kg bags, Bulk supply",
+        "exportAvailability": "Year-round. MOQ: 30 MT. Flexible delivery 14-18 days",
+        "qualityInfo": "Mainstream Grade. Whiteness: 36-38. Broken: 2% max. Food safety certified.",
+        "applications": [
+          "Trusted mainstream retail",
+          "Wholesalers",
+          "Food service"
+        ],
+        "grainLength": "7.80–7.95 mm",
+        "texture": "Soft, gentle",
+        "appearance": "Long grain",
+        "slug": "choice-trusted-quality",
+        "name": "CHOICE",
+        "variety": "CHOICE",
+        "category": "Basmati",
+        "grainTone": "cream",
+        "image": 5640320,
+        "shortDescription": "Everyday Steam Basmati Rice.",
+        "overview": "Carefully selected Basmati Steam Dubar and half-grain rice, Choice brings the familiar aroma, natural taste, and comforting texture of Basmati to your everyday meals. Its shorter, balanced grains make it an ideal choice for regular home cooking, offering consistent quality and great taste at an affordable price.\n\nChoice is crafted for everyday meals — simple, wholesome and satisfying, every day.",
+        "cookedLength": "17–19 mm",
+        "characterTags": [
+          "Long grain",
+          "Gentle aroma",
+          "Soft & versatile",
+          "Trusted quality",
+          "Consistent performance"
+        ],
+        "marketTags": [
+          "Mainstream retail",
+          "Foodservice",
+          "Wholesalers",
+          "Value-led programmes"
+        ],
+        "expressions": [
+          {
+            "name": "Raw",
+            "tone": "#efe8d8",
+            "toneLabel": "Natural white",
+            "description": "Classic basmati with gentle aroma.",
+            "avgLength": "7.80–7.90 mm",
+            "cookedLength": "17–18 mm",
+            "whiteness": "38–40",
+            "moisture": "12.5% max",
+            "broken": "2% max",
+            "imageUrl": "https://images.pexels.com/photos/36346840/pexels-photo-36346840.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          },
+          {
+            "name": "Sella",
+            "tone": "#e4cf9c",
+            "toneLabel": "Parboiled cream",
+            "description": "Parboiled for reliable cooking in bulk settings.",
+            "avgLength": "7.85–7.95 mm",
+            "cookedLength": "17–19 mm",
+            "whiteness": "26–29",
+            "moisture": "12.0% max",
+            "broken": "2% max",
+            "imageUrl": "https://images.pexels.com/photos/7851798/pexels-photo-7851798.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          }
+        ]
+      },
+      {
+        "id": "p6",
+        "sortOrder": 6,
+        "published": true,
+        "sampleData": false,
+        "featured": true,
+        "images": [
+          {
+            "url": "/products/smart.png",
+            "alt": "SMART Nutritious Everyday Rice - Health Package"
+          }
+        ],
+        "videos": [],
+        "specifications": [],
+        "packagingOptions": [
+          "Consumer packs",
+          "Bulk bags",
+          "Export packaging",
+          "Private label"
+        ],
+        "availableQuantities": "2 kg, 5 kg, 25 kg bags, Organic option",
+        "exportAvailability": "Year-round. Brown and White variants. MOQ: 15 MT. 15-17 days",
+        "qualityInfo": "Organic certified available. High bran retention. Low glycemic index. Nutrient rich.",
+        "applications": [
+          "Health-conscious households",
+          "Retail wellness programs",
+          "Catering"
+        ],
+        "grainLength": "7.70–7.85 mm",
+        "texture": "Firm, nutritious",
+        "appearance": "Long grain, natural",
+        "slug": "smart-nutritious-everyday",
+        "name": "SMART",
+        "variety": "SMART",
+        "category": "Basmati",
+        "grainTone": "cream",
+        "image": 3962284,
+        "shortDescription": "Basmati Steam Mongra.",
+        "overview": "A practical choice crafted from Basmati Steam Mongra, Smart offers the authentic aroma and distinctive taste of Basmati in a smaller-grain format. Its texture and easy-to-cook nature make it especially suitable for khichdi, baby food and soft, comforting everyday meals.\n\nWith the familiar goodness of Basmati at an economical price, Smart is designed for simple nourishment and everyday convenience.",
+        "cookedLength": "16–18 mm",
+        "characterTags": [
+          "Long grain",
+          "Nutritious",
+          "Natural finish",
+          "Health-focused",
+          "Versatile"
+        ],
+        "marketTags": [
+          "Wellness retail",
+          "Health-conscious",
+          "Everyday households",
+          "Catering"
+        ],
+        "expressions": [
+          {
+            "name": "Raw",
+            "tone": "#efe8d8",
+            "toneLabel": "Natural white",
+            "description": "Milled basmati with natural nutrition retained.",
+            "avgLength": "7.70–7.80 mm",
+            "cookedLength": "16–17 mm",
+            "whiteness": "37–39",
+            "moisture": "12.5% max",
+            "broken": "2.5% max",
+            "imageUrl": "https://images.pexels.com/photos/36346840/pexels-photo-36346840.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          },
+          {
+            "name": "Brown",
+            "tone": "#a87443",
+            "toneLabel": "Natural brown",
+            "description": "Wholegrain basmati retaining natural bran nutrition.",
+            "avgLength": "7.65–7.75 mm",
+            "cookedLength": "15–17 mm",
+            "whiteness": "15–18",
+            "moisture": "12.5% max",
+            "broken": "2.5% max",
+            "imageUrl": "https://images.pexels.com/photos/31555433/pexels-photo-31555433.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          }
+        ]
+      },
+      {
+        "id": "p7",
+        "sortOrder": 7,
+        "published": true,
+        "sampleData": false,
+        "featured": true,
+        "images": [
+          {
+            "url": "/products/sungold.png",
+            "alt": "SUNGOLD Golden Grain Rice - Specialty Package"
+          }
+        ],
+        "videos": [],
+        "specifications": [],
+        "packagingOptions": [
+          "Consumer packs",
+          "Bulk bags",
+          "Export packaging",
+          "Private label"
+        ],
+        "availableQuantities": "25 kg, 30 kg bags, Bulk supply available",
+        "exportAvailability": "Year-round parboiled rice. MOQ: 20 MT. 14-16 days delivery",
+        "qualityInfo": "Sella Grade Premium. Golden tone natural. Firm cooking guarantee. Moisture 12.0% max.",
+        "applications": [
+          "Parboiled specialist retail",
+          "Bulk catering",
+          "Institutional supply"
+        ],
+        "grainLength": "7.60–7.75 mm",
+        "texture": "Firm when parboiled",
+        "appearance": "Long grain, golden finish",
+        "slug": "sungold-golden-grain",
+        "name": "SUNGOLD",
+        "variety": "SUNGOLD",
+        "category": "Basmati",
+        "grainTone": "golden",
+        "image": 3688367,
+        "shortDescription": "Premium Basmati Golden Sella Rice.",
+        "overview": "Carefully processed to develop its distinctive golden colour, firm texture, and aromatic character, Sungold is crafted for dishes where every grain needs to look and taste exceptional. Its excellent cooking performance helps the grains remain separate, fluffy, and beautifully elongated, making it an ideal choice for rich, flavourful biryanis.\n\nSungold brings together the elegance of Basmati with the distinctive golden finish that makes every biryani look special.",
+        "cookedLength": "16–18 mm",
+        "characterTags": [
+          "Long grain",
+          "Golden finish",
+          "Parboiled firm",
+          "Distinctive look",
+          "Bulk-friendly"
+        ],
+        "marketTags": [
+          "Specialty retail",
+          "Foodservice",
+          "Institutional supply",
+          "Bulk programs"
+        ],
+        "expressions": [
+          {
+            "name": "Sella Golden",
+            "tone": "#d8a654",
+            "toneLabel": "Golden amber",
+            "description": "Parboiled for a distinctive golden tone and firm separate grains.",
+            "avgLength": "7.60–7.70 mm",
+            "cookedLength": "16–17 mm",
+            "whiteness": "18–20",
+            "moisture": "12.0% max",
+            "broken": "2.5% max",
+            "imageUrl": "https://images.pexels.com/photos/36346844/pexels-photo-36346844.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          },
+          {
+            "name": "Sella Lemon",
+            "tone": "#e6d58f",
+            "toneLabel": "Pale straw",
+            "description": "Light parboil — pale straw tone for a softer specialty look.",
+            "avgLength": "7.65–7.75 mm",
+            "cookedLength": "16–18 mm",
+            "whiteness": "24–26",
+            "moisture": "12.0% max",
+            "broken": "2.5% max",
+            "imageUrl": "https://images.pexels.com/photos/7421204/pexels-photo-7421204.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          }
+        ]
+      },
+      {
+        "id": "p8",
+        "sortOrder": 8,
+        "published": true,
+        "sampleData": false,
+        "featured": true,
+        "images": [
+          {
+            "url": "/products/pure.png",
+            "alt": "PURE Natural & Wholesome Rice - Premium Package"
+          }
+        ],
+        "videos": [],
+        "specifications": [],
+        "packagingOptions": [
+          "Consumer packs",
+          "Bulk bags",
+          "Export packaging",
+          "Private label"
+        ],
+        "availableQuantities": "3 kg, 5 kg, 10 kg premium packs, Bulk organic",
+        "exportAvailability": "Year-round organic supply. MOQ: 12 MT. 16-18 days delivery",
+        "qualityInfo": "Organic certification available. No pesticides, no chemicals. Pure natural basmati. Lab verified.",
+        "applications": [
+          "Organic-minded retail",
+          "Natural food stores",
+          "Premium households"
+        ],
+        "grainLength": "7.50–7.65 mm",
+        "texture": "Natural, wholesome",
+        "appearance": "Long grain, natural white",
+        "slug": "pure-natural-wholesome",
+        "name": "PURE",
+        "variety": "PURE",
+        "category": "Non-Basmati",
+        "grainTone": "white",
+        "image": 4552783,
+        "shortDescription": "Finest Raw Rice.",
+        "overview": "Carefully selected from the finest Raw Rice grains, Pure is known for its clean, bright-white appearance, natural taste, and wholesome texture. Carefully processed to retain the natural character of the grain, it delivers consistent cooking quality and a satisfying finish in everyday meals.\n\nPure represents simplicity at its best — clean, natural and dependable rice for everyday cooking.",
+        "cookedLength": "16–18 mm",
+        "characterTags": [
+          "Long grain",
+          "Natural finish",
+          "Wholesome",
+          "Minimally processed",
+          "Pure quality"
+        ],
+        "marketTags": [
+          "Natural/Organic retail",
+          "Premium households",
+          "Wellness-focused",
+          "Pure quality"
+        ],
+        "expressions": [
+          {
+            "name": "Raw Natural",
+            "tone": "#efe8d8",
+            "toneLabel": "Natural white",
+            "description": "Minimally processed basmati retaining natural character.",
+            "avgLength": "7.50–7.60 mm",
+            "cookedLength": "16–17 mm",
+            "whiteness": "37–39",
+            "moisture": "12.5% max",
+            "broken": "2% max",
+            "imageUrl": "https://images.pexels.com/photos/15879424/pexels-photo-15879424.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          },
+          {
+            "name": "Steam Natural",
+            "tone": "#f8f5ec",
+            "toneLabel": "Bright white",
+            "description": "Lightly steam-treated for freshness while maintaining natural character.",
+            "avgLength": "7.55–7.65 mm",
+            "cookedLength": "16–18 mm",
+            "whiteness": "32–34",
+            "moisture": "12.5% max",
+            "broken": "2% max",
+            "imageUrl": "https://images.pexels.com/photos/36346845/pexels-photo-36346845.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          }
+        ]
+      }
+    ],
+    "processingSteps": [
+      {
+        "id": "ps1",
+        "sortOrder": 1,
+        "published": true,
+        "number": "01",
+        "title": "Paddy Reception",
+        "summary": "Incoming paddy is received, weighed and sampled.",
+        "description": "Each consignment of paddy is logged on arrival. Samples are drawn for moisture and quality assessment before the lot is accepted into storage.",
+        "icon": "truck",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "ps2",
+        "sortOrder": 2,
+        "published": true,
+        "number": "02",
+        "title": "Cleaning",
+        "summary": "Dust, straw and light impurities are removed.",
+        "description": "Pre-cleaning separates dust, chaff, straw and other light foreign matter so that only clean paddy moves forward in the line.",
+        "icon": "wind",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "ps3",
+        "sortOrder": 3,
+        "published": true,
+        "number": "03",
+        "title": "De-stoning",
+        "summary": "Stones and heavy particles are separated.",
+        "description": "De-stoning removes stones, mud balls and heavier particles that share the size of a paddy grain but differ in density.",
+        "icon": "layers",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "ps4",
+        "sortOrder": 4,
+        "published": true,
+        "number": "04",
+        "title": "Milling",
+        "summary": "Husk and bran layers are removed from the grain.",
+        "description": "Hulling removes the outer husk, then whitening gently removes the bran layer to reveal the rice kernel while limiting breakage.",
+        "icon": "cog",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "ps5",
+        "sortOrder": 5,
+        "published": true,
+        "number": "05",
+        "title": "Optical Sorting",
+        "summary": "Discoloured and defective grains are rejected.",
+        "description": "Optical sorting inspects the flow of grains and rejects discoloured, chalky or defective kernels to achieve a uniform appearance.",
+        "icon": "scan-eye",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "ps6",
+        "sortOrder": 6,
+        "published": true,
+        "number": "06",
+        "title": "Polishing",
+        "summary": "Grains are polished to a clean, even finish.",
+        "description": "Polishing smooths the surface of each kernel, improving lustre, shelf appearance and consistency across the batch.",
+        "icon": "sparkles",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "ps7",
+        "sortOrder": 7,
+        "published": true,
+        "number": "07",
+        "title": "Quality Inspection",
+        "summary": "Samples are checked against the buyer's specification.",
+        "description": "Samples from the line are inspected for grain length, broken percentage, moisture and foreign matter before the lot is released.",
+        "icon": "microscope",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "ps8",
+        "sortOrder": 8,
+        "published": true,
+        "number": "08",
+        "title": "Grading",
+        "summary": "Rice is graded by length and broken content.",
+        "description": "Graders separate head rice from brokens and classify the rice by length so that every bag matches its declared grade.",
+        "icon": "ruler",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "ps9",
+        "sortOrder": 9,
+        "published": true,
+        "number": "09",
+        "title": "Packaging",
+        "summary": "Rice is weighed, packed and sealed.",
+        "description": "Graded rice is weighed and packed into the agreed packaging, sealed, labelled and coded for batch traceability.",
+        "icon": "package",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "ps10",
+        "sortOrder": 10,
+        "published": true,
+        "number": "10",
+        "title": "Export",
+        "summary": "Containers are loaded and shipped.",
+        "description": "Packed rice is loaded into containers with export documentation prepared for customs clearance and shipment to the destination port.",
+        "icon": "ship",
+        "mediaUrl": "",
+        "mediaType": "image"
+      }
+    ],
+    "technologies": [
+      {
+        "id": "t1",
+        "sortOrder": 1,
+        "published": true,
+        "title": "Milling Technology",
+        "description": "State-of-the-art rubber roll shellers and horizontal whiteners from leading manufacturers ensure gentle husk removal with minimal breakage, preserving grain integrity.",
+        "icon": "cog",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "t2",
+        "sortOrder": 2,
+        "published": true,
+        "title": "Automated Processing",
+        "description": "Fully automated conveying and processing lines with PLC control systems ensure consistent throughput, minimal human intervention, and precise quality control.",
+        "icon": "cpu",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "t3",
+        "sortOrder": 3,
+        "published": true,
+        "title": "Optical Sorting",
+        "description": "Advanced CCD-based optical sorters detect discolored, chalky, and defective grains with 99%+ accuracy, delivering uniform premium-grade rice to every batch.",
+        "icon": "scan-eye",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "t4",
+        "sortOrder": 4,
+        "published": true,
+        "title": "Advanced Grading",
+        "description": "Multi-stage grading systems using indented cylinders and length graders separate head rice from brokens, ensuring every bag meets its declared grade specification.",
+        "icon": "ruler",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "t5",
+        "sortOrder": 5,
+        "published": true,
+        "title": "Quality Inspection",
+        "description": "In-house laboratory with moisture meters, Kett whiteness analyzers, and grain analyzers for precise quality assurance at every production stage.",
+        "icon": "microscope",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "t6",
+        "sortOrder": 6,
+        "published": true,
+        "title": "Packaging Technology",
+        "description": "Automated weighing, filling, sealing, and labeling machines with high-speed packing lines capable of multiple pack sizes from consumer packs to bulk bags.",
+        "icon": "package",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "t7",
+        "sortOrder": 7,
+        "published": true,
+        "title": "Warehouse Management",
+        "description": "Climate-controlled storage with 9,000 MT capacity, pest-free facilities, FIFO stock rotation, and digital inventory tracking for freshness and traceability.",
+        "icon": "warehouse",
+        "mediaUrl": "",
+        "mediaType": "image"
+      },
+      {
+        "id": "t8",
+        "sortOrder": 8,
+        "published": true,
+        "title": "Export Preparation",
+        "description": "Dedicated container stuffing bays, fumigation facilities, and complete export documentation workflow for seamless international shipments.",
+        "icon": "container",
+        "mediaUrl": "",
+        "mediaType": "image"
+      }
+    ],
+    "qualityChecks": [
+      {
+        "id": "q1",
+        "sortOrder": 1,
+        "published": true,
+        "title": "Quality Checks",
+        "description": "Defined checkpoints at intake, in-process and before dispatch.",
+        "icon": "clipboard-check"
+      },
+      {
+        "id": "q2",
+        "sortOrder": 2,
+        "published": true,
+        "title": "Grain Inspection",
+        "description": "Length, colour, chalkiness and broken percentage are assessed against specification.",
+        "icon": "microscope"
+      },
+      {
+        "id": "q3",
+        "sortOrder": 3,
+        "published": true,
+        "title": "Moisture Testing",
+        "description": "Moisture is measured at intake and before packing to protect shelf life in transit.",
+        "icon": "droplets"
+      },
+      {
+        "id": "q4",
+        "sortOrder": 4,
+        "published": true,
+        "title": "Sorting",
+        "description": "Defective and discoloured kernels are removed from the flow.",
+        "icon": "scan-eye"
+      },
+      {
+        "id": "q5",
+        "sortOrder": 5,
+        "published": true,
+        "title": "Packaging Inspection",
+        "description": "Seals, weights, labels and markings are verified before palletising.",
+        "icon": "package-check"
+      },
+      {
+        "id": "q6",
+        "sortOrder": 6,
+        "published": true,
+        "title": "Batch Verification",
+        "description": "Every lot is coded so that it can be traced back through the process.",
+        "icon": "fingerprint"
+      }
+    ],
+    "certifications": [
+      {
+        "id": "c1",
+        "sortOrder": 1,
+        "published": true,
+        "name": "ISO 9001:2015",
+        "kind": "certification",
+        "issuer": "International Organization for Standardization",
+        "certificateNumber": "ISO-9001-2024-IVZ",
+        "validUntil": "2027-12-31",
+        "imageUrl": "",
+        "documentUrl": ""
+      },
+      {
+        "id": "c2",
+        "sortOrder": 2,
+        "published": true,
+        "name": "ISO 22000:2018 (Food Safety)",
+        "kind": "certification",
+        "issuer": "International Organization for Standardization",
+        "certificateNumber": "ISO-22000-2024-IVZ",
+        "validUntil": "2027-06-30",
+        "imageUrl": "",
+        "documentUrl": ""
+      },
+      {
+        "id": "c3",
+        "sortOrder": 3,
+        "published": true,
+        "name": "HACCP Certified",
+        "kind": "certification",
+        "issuer": "HACCP International",
+        "certificateNumber": "HACCP-2024-IVZ-001",
+        "validUntil": "2026-12-31",
+        "imageUrl": "",
+        "documentUrl": ""
+      },
+      {
+        "id": "c4",
+        "sortOrder": 4,
+        "published": true,
+        "name": "APEDA Registered Exporter",
+        "kind": "certification",
+        "issuer": "Agricultural & Processed Food Products Export Development Authority",
+        "certificateNumber": "APEDA-RCMC-2024",
+        "validUntil": "2026-03-31",
+        "imageUrl": "",
+        "documentUrl": ""
+      }
+    ],
+    "trustItems": [
+      {
+        "id": "tr1",
+        "sortOrder": 1,
+        "published": true,
+        "kind": "registration",
+        "title": "IEC Registration",
+        "description": "Import-Export Code registered with DGFT India",
+        "imageUrl": "",
+        "url": ""
+      },
+      {
+        "id": "tr2",
+        "sortOrder": 2,
+        "published": true,
+        "kind": "registration",
+        "title": "FSSAI Licensed",
+        "description": "Food Safety and Standards Authority of India approved",
+        "imageUrl": "",
+        "url": ""
+      },
+      {
+        "id": "tr3",
+        "sortOrder": 3,
+        "published": true,
+        "kind": "membership",
+        "title": "AIREA Member",
+        "description": "All India Rice Exporters Association member",
+        "imageUrl": "",
+        "url": ""
+      },
+      {
+        "id": "tr4",
+        "sortOrder": 4,
+        "published": true,
+        "kind": "certification",
+        "title": "Non-GMO Verified",
+        "description": "Independent verification of non-GMO sourcing",
+        "imageUrl": "",
+        "url": ""
+      }
+    ],
+    "exportCountries": [
+      {
+        "id": "ec1",
+        "sortOrder": 1,
+        "published": true,
+        "name": "United Arab Emirates",
+        "region": "Middle East",
+        "lat": 25.2,
+        "lng": 55.3,
+        "port": "Jebel Ali Port",
+        "isMajorMarket": true,
+        "note": "Major basmati market",
+        "isPlaceholder": false
+      },
+      {
+        "id": "ec2",
+        "sortOrder": 2,
+        "published": true,
+        "name": "United Kingdom",
+        "region": "Europe",
+        "lat": 51.5,
+        "lng": -0.1,
+        "port": "Felixstowe",
+        "isMajorMarket": true,
+        "note": "Premium retail chains",
+        "isPlaceholder": false
+      },
+      {
+        "id": "ec3",
+        "sortOrder": 3,
+        "published": true,
+        "name": "United States",
+        "region": "Americas",
+        "lat": 40.7,
+        "lng": -74,
+        "port": "New York",
+        "isMajorMarket": true,
+        "note": "Specialty retail",
+        "isPlaceholder": false
+      },
+      {
+        "id": "ec4",
+        "sortOrder": 4,
+        "published": true,
+        "name": "Saudi Arabia",
+        "region": "Middle East",
+        "lat": 24.7,
+        "lng": 46.7,
+        "port": "Jeddah",
+        "isMajorMarket": true,
+        "note": "Hospitality & retail",
+        "isPlaceholder": false
+      },
+      {
+        "id": "ec5",
+        "sortOrder": 5,
+        "published": true,
+        "name": "Singapore",
+        "region": "Asia",
+        "lat": 1.3,
+        "lng": 103.8,
+        "port": "Port of Singapore",
+        "isMajorMarket": true,
+        "note": "Regional distribution hub",
+        "isPlaceholder": false
+      },
+      {
+        "id": "ec6",
+        "sortOrder": 6,
+        "published": true,
+        "name": "Kenya",
+        "region": "Africa",
+        "lat": -1.3,
+        "lng": 36.8,
+        "port": "Mombasa",
+        "isMajorMarket": false,
+        "note": "Growing market",
+        "isPlaceholder": false
+      }
+    ],
+    "exportRoutes": [],
+    "exportSteps": [
+      {
+        "id": "es1",
+        "sortOrder": 1,
+        "published": true,
+        "number": "01",
+        "title": "Inquiry",
+        "description": "Share your product, quantity, packaging and destination port through the inquiry form, email or WhatsApp.",
+        "icon": "message-square"
+      },
+      {
+        "id": "es2",
+        "sortOrder": 2,
+        "published": true,
+        "number": "02",
+        "title": "Product Selection",
+        "description": "We help you choose the variety, grade and specification that fits your market.",
+        "icon": "list-checks"
+      },
+      {
+        "id": "es3",
+        "sortOrder": 3,
+        "published": true,
+        "number": "03",
+        "title": "Sample / Approval",
+        "description": "Samples can be arranged for evaluation so you approve the quality before ordering.",
+        "icon": "flask-conical"
+      },
+      {
+        "id": "es4",
+        "sortOrder": 4,
+        "published": true,
+        "number": "04",
+        "title": "Order Confirmation",
+        "description": "Price, quantity, packaging, incoterms and payment terms are confirmed in a contract.",
+        "icon": "file-signature"
+      },
+      {
+        "id": "es5",
+        "sortOrder": 5,
+        "published": true,
+        "number": "05",
+        "title": "Production",
+        "description": "Your order is milled, sorted and graded to the agreed specification.",
+        "icon": "cog"
+      },
+      {
+        "id": "es6",
+        "sortOrder": 6,
+        "published": true,
+        "number": "06",
+        "title": "Quality Inspection",
+        "description": "The lot is inspected before packing; third-party inspection can be arranged on request.",
+        "icon": "microscope"
+      },
+      {
+        "id": "es7",
+        "sortOrder": 7,
+        "published": true,
+        "number": "07",
+        "title": "Packaging",
+        "description": "Rice is packed in the agreed bags with your labelling or private-label artwork.",
+        "icon": "package"
+      },
+      {
+        "id": "es8",
+        "sortOrder": 8,
+        "published": true,
+        "number": "08",
+        "title": "Container Loading",
+        "description": "Bags are loaded into containers, with loading photographs and seal numbers recorded.",
+        "icon": "container"
+      },
+      {
+        "id": "es9",
+        "sortOrder": 9,
+        "published": true,
+        "number": "09",
+        "title": "Shipment",
+        "description": "The container sails with shipping documents shared for clearance at destination.",
+        "icon": "ship"
+      },
+      {
+        "id": "es10",
+        "sortOrder": 10,
+        "published": true,
+        "number": "10",
+        "title": "Delivery",
+        "description": "Your consignment arrives at the destination port, ready for clearance and distribution.",
+        "icon": "map-pin-check"
+      }
+    ],
+    "factoryMedia": [
+      {
+        "id": "fm1",
+        "sortOrder": 1,
+        "published": true,
+        "title": "Rice mill floor",
+        "description": "Sample photo — replace with your own facility images.",
+        "category": "rice-mill",
+        "type": "image",
+        "url": "",
+        "posterUrl": "",
+        "provider": "mp4"
+      },
+      {
+        "id": "fm2",
+        "sortOrder": 2,
+        "published": true,
+        "title": "Paddy drying yard",
+        "description": "Sample photo — replace with your own facility images.",
+        "category": "processing-plant",
+        "type": "image",
+        "url": "",
+        "posterUrl": "",
+        "provider": "mp4"
+      },
+      {
+        "id": "fm3",
+        "sortOrder": 3,
+        "published": true,
+        "title": "Bagged rice storage",
+        "description": "Sample photo — replace with your own facility images.",
+        "category": "storage",
+        "type": "image",
+        "url": "",
+        "posterUrl": "",
+        "provider": "mp4"
+      },
+      {
+        "id": "fm4",
+        "sortOrder": 4,
+        "published": true,
+        "title": "Warehouse handling",
+        "description": "Sample photo — replace with your own facility images.",
+        "category": "warehouse",
+        "type": "image",
+        "url": "",
+        "posterUrl": "",
+        "provider": "mp4"
+      },
+      {
+        "id": "fm5",
+        "sortOrder": 5,
+        "published": true,
+        "title": "Grain silos",
+        "description": "Sample photo — replace with your own facility images.",
+        "category": "storage",
+        "type": "image",
+        "url": "",
+        "posterUrl": "",
+        "provider": "mp4"
+      },
+      {
+        "id": "fm6",
+        "sortOrder": 6,
+        "published": true,
+        "title": "Truck loading",
+        "description": "Sample photo — replace with your own facility images.",
+        "category": "loading",
+        "type": "image",
+        "url": "",
+        "posterUrl": "",
+        "provider": "mp4"
+      },
+      {
+        "id": "fm7",
+        "sortOrder": 7,
+        "published": true,
+        "title": "Container vessel at port",
+        "description": "Sample photo — replace with your own facility images.",
+        "category": "container",
+        "type": "image",
+        "url": "",
+        "posterUrl": "",
+        "provider": "mp4"
+      },
+      {
+        "id": "fm8",
+        "sortOrder": 8,
+        "published": true,
+        "title": "Port at dusk",
+        "description": "Sample photo — replace with your own facility images.",
+        "category": "container",
+        "type": "image",
+        "url": "",
+        "posterUrl": "",
+        "provider": "mp4"
+      }
+    ],
+    "videos": [
+      {
+        "id": "v1",
+        "sortOrder": 1,
+        "published": true,
+        "title": "Rice Mill in Action",
+        "description": "Watch our rural rice mill worker processing grains — the heart of our premium basmati production.",
+        "category": "processing",
+        "provider": "mp4",
+        "url": "https://videos.pexels.com/video-files/35794910/15175654_2560_1440_30fps.mp4",
+        "posterUrl": "https://images.pexels.com/photos/5262428/pexels-photo-5262428.jpeg?auto=compress&cs=tinysrgb&w=1920",
+        "duration": "0:25",
+        "featured": true
+      },
+      {
+        "id": "v2",
+        "sortOrder": 2,
+        "published": true,
+        "title": "Rice Field Harvest",
+        "description": "Combine harvester at work in lush rice fields — the beginning of our premium rice journey.",
+        "category": "farming",
+        "provider": "mp4",
+        "url": "https://videos.pexels.com/video-files/8259229/8259229-hd_1920_1080_30fps.mp4",
+        "posterUrl": "https://images.pexels.com/photos/27896277/pexels-photo-27896277.jpeg?auto=compress&cs=tinysrgb&w=1920",
+        "duration": "0:30",
+        "featured": true
+      },
+      {
+        "id": "v3",
+        "sortOrder": 3,
+        "published": true,
+        "title": "Farmers Cultivating Paddy",
+        "description": "Our farmer partners working in lush rice paddies — the traditional expertise behind our premium basmati.",
+        "category": "farming",
+        "provider": "mp4",
+        "url": "https://videos.pexels.com/video-files/37682095/15976311_1080_1920_30fps.mp4",
+        "posterUrl": "https://images.pexels.com/photos/37708070/pexels-photo-37708070.jpeg?auto=compress&cs=tinysrgb&w=1920",
+        "duration": "0:20",
+        "featured": false
+      },
+      {
+        "id": "v4",
+        "sortOrder": 4,
+        "published": true,
+        "title": "Rice Planting Season",
+        "description": "Traditional rice planting in lush green fields — the foundation of our premium basmati supply chain.",
+        "category": "farming",
+        "provider": "mp4",
+        "url": "https://videos.pexels.com/video-files/39348685/16748491_1440_2560_30fps.mp4",
+        "posterUrl": "https://images.pexels.com/photos/34221784/pexels-photo-34221784.jpeg?auto=compress&cs=tinysrgb&w=1920",
+        "duration": "0:25",
+        "featured": false
+      },
+      {
+        "id": "v5",
+        "sortOrder": 5,
+        "published": true,
+        "title": "Rice Paddy Close-up",
+        "description": "A detailed look at rice paddy plants swaying in the breeze — the source of our premium quality grains.",
+        "category": "quality",
+        "provider": "mp4",
+        "url": "https://videos.pexels.com/video-files/6592618/6592618-hd_1920_1080_25fps.mp4",
+        "posterUrl": "https://images.pexels.com/photos/17502263/pexels-photo-17502263.jpeg?auto=compress&cs=tinysrgb&w=1920",
+        "duration": "0:30",
+        "featured": true
+      }
+    ],
+    "packaging": [
+      {
+        "id": "pk1",
+        "sortOrder": 1,
+        "published": true,
+        "name": "Consumer Pack",
+        "packType": "consumer",
+        "description": "Retail-ready premium packs in 1 kg, 5 kg, and 10 kg sizes with vacuum-sealed inner liners and attractive branding for supermarkets, specialty stores, and online retail.",
+        "sizes": "1kg, 5kg, 10kg",
+        "material": "Food-grade laminated BOPP",
+        "privateLabel": "Yes, available with artwork support",
+        "moq": "5,000 packs",
+        "imageUrl": ""
+      },
+      {
+        "id": "pk2",
+        "sortOrder": 2,
+        "published": true,
+        "name": "Bulk Pack",
+        "packType": "bulk",
+        "description": "Export-grade bulk bags in 25 kg and 50 kg sizes using high-strength woven polypropylene with inner liners, perfect for wholesalers and food service operations.",
+        "sizes": "25kg, 50kg",
+        "material": "Woven PP with inner liner",
+        "privateLabel": "Yes, available with artwork support",
+        "moq": "20 MT",
+        "imageUrl": ""
+      },
+      {
+        "id": "pk3",
+        "sortOrder": 3,
+        "published": true,
+        "name": "Export Pack",
+        "packType": "export",
+        "description": "International shipping-grade packaging designed for long sea transit — moisture-proof, pest-resistant, and tamper-evident with export certifications.",
+        "sizes": "25kg, 50kg (export grade)",
+        "material": "Woven PP with inner liner",
+        "privateLabel": "Yes, available with artwork support",
+        "moq": "20 MT",
+        "imageUrl": ""
+      },
+      {
+        "id": "pk4",
+        "sortOrder": 4,
+        "published": true,
+        "name": "Custom Packaging",
+        "packType": "custom",
+        "description": "Full private-label service — your brand, your artwork, your pack sizes. We handle design consultation, printing, and manufacturing for your custom program.",
+        "sizes": "Custom (any size)",
+        "material": "Woven PP with inner liner",
+        "privateLabel": "Yes, available with artwork support",
+        "moq": "20 MT",
+        "imageUrl": ""
+      }
+    ],
+    "testimonials": [
+      {
+        "id": "t1",
+        "sortOrder": 1,
+        "published": true,
+        "customerName": "Ahmad Al-Rashid",
+        "company": "Gulf Food Distribution LLC",
+        "country": "United Arab Emirates",
+        "imageUrl": "",
+        "quote": "Ivvaz has been our trusted basmati supplier for the past 3 years. Their consistent quality, timely delivery, and professional communication make them a reliable partner for our premium retail chain."
+      },
+      {
+        "id": "t2",
+        "sortOrder": 2,
+        "published": true,
+        "customerName": "Sarah Mitchell",
+        "company": "Mitchell Foods UK",
+        "country": "United Kingdom",
+        "imageUrl": "",
+        "quote": "The premium quality of ROYALE Basmati from Ivvaz has transformed our restaurant chain offerings. Every grain cooks perfectly — our chefs love it."
+      },
+      {
+        "id": "t3",
+        "sortOrder": 3,
+        "published": true,
+        "customerName": "Mohammed Hassan",
+        "company": "Hassan Trading Co.",
+        "country": "Saudi Arabia",
+        "imageUrl": "",
+        "quote": "What impressed me most about Ivvaz is their complete transparency — from lot numbers to lab reports. True professionalism in the rice export business."
+      }
+    ],
+    "partnerReasons": [
+      {
+        "id": "r1",
+        "sortOrder": 1,
+        "published": true,
+        "title": "Consistent Quality",
+        "description": "Every batch maintains the same specification through strict quality control, standardized processing, and comprehensive lab testing before dispatch.",
+        "icon": "badge-check"
+      },
+      {
+        "id": "r2",
+        "sortOrder": 2,
+        "published": true,
+        "title": "Modern Processing",
+        "description": "Latest milling technology combined with experienced operators ensures premium-grade output that meets international quality standards.",
+        "icon": "cpu"
+      },
+      {
+        "id": "r3",
+        "sortOrder": 3,
+        "published": true,
+        "title": "Reliable Supply",
+        "description": "Direct sourcing from trusted farmer networks, 9,000 MT storage, and year-round availability guarantee steady supply for your orders.",
+        "icon": "refresh-cw"
+      },
+      {
+        "id": "r4",
+        "sortOrder": 4,
+        "published": true,
+        "title": "Global Logistics",
+        "description": "Partnerships with major shipping lines (Maersk, MSC, Hapag-Lloyd) and experience shipping to 25+ countries ensure smooth delivery.",
+        "icon": "globe"
+      },
+      {
+        "id": "r5",
+        "sortOrder": 5,
+        "published": true,
+        "title": "Professional Packaging",
+        "description": "Multiple pack sizes, premium materials, custom private-label artwork, and export-grade packaging for long sea transit.",
+        "icon": "package"
+      },
+      {
+        "id": "r6",
+        "sortOrder": 6,
+        "published": true,
+        "title": "Quality Control",
+        "description": "ISO-certified processes with checkpoints at paddy intake, in-process, and before dispatch — every batch traceable and verified.",
+        "icon": "shield-check"
+      },
+      {
+        "id": "r7",
+        "sortOrder": 7,
+        "published": true,
+        "title": "Export Experience",
+        "description": "Years of export experience with complete documentation support, customs expertise, and smooth international trade operations.",
+        "icon": "ship"
+      },
+      {
+        "id": "r8",
+        "sortOrder": 8,
+        "published": true,
+        "title": "Customer Support",
+        "description": "Dedicated export team available via email, phone, and WhatsApp for inquiries, samples, order updates, and after-sales support.",
+        "icon": "headset"
+      }
+    ],
+    "socialLinks": [
+      {
+        "id": "s1",
+        "sortOrder": 1,
+        "published": true,
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/company/ivvaz"
+      },
+      {
+        "id": "s2",
+        "sortOrder": 2,
+        "published": true,
+        "platform": "Instagram",
+        "url": "https://instagram.com/ivvaz"
+      },
+      {
+        "id": "s3",
+        "sortOrder": 3,
+        "published": true,
+        "platform": "Facebook",
+        "url": "https://facebook.com/ivvaz"
+      }
+    ],
+    "kitchenVideos": [
+      {
+        "id": "kv1",
+        "sortOrder": 1,
+        "published": true,
+        "title": "Chicken Biryani",
+        "tag": "Biryani",
+        "description": "Layered, slow-cooked and fragrant.",
+        "videoUrl": "https://videos.pexels.com/video-files/30044483/12888331_540_960_30fps.mp4",
+        "videoHdUrl": "https://videos.pexels.com/video-files/30044483/12888336_1080_1920_30fps.mp4",
+        "posterUrl": "https://images.pexels.com/videos/30044483/pictures/preview-0.jpg"
+      },
+      {
+        "id": "kv2",
+        "sortOrder": 2,
+        "published": true,
+        "title": "Vegetable Fried Rice",
+        "tag": "Fried Rice",
+        "description": "Wok-tossed with crisp vegetables.",
+        "videoUrl": "https://videos.pexels.com/video-files/7008575/7008575-sd_540_960_25fps.mp4",
+        "videoHdUrl": "https://videos.pexels.com/video-files/7008575/7008575-hd_1080_1920_25fps.mp4",
+        "posterUrl": "https://images.pexels.com/videos/7008575/pexels-photo-7008575.jpeg"
+      },
+      {
+        "id": "kv3",
+        "sortOrder": 3,
+        "published": true,
+        "title": "Biryani with Crispy Onions",
+        "tag": "Biryani",
+        "description": "Finished with golden fried onions.",
+        "videoUrl": "https://videos.pexels.com/video-files/30044490/12888247_540_960_30fps.mp4",
+        "videoHdUrl": "https://videos.pexels.com/video-files/30044490/12888249_1080_1920_30fps.mp4",
+        "posterUrl": "https://images.pexels.com/videos/30044490/pictures/preview-0.jpg"
+      },
+      {
+        "id": "kv4",
+        "sortOrder": 4,
+        "published": true,
+        "title": "Mushroom Fried Rice",
+        "tag": "Fried Rice",
+        "description": "Light vegan weeknight favorite.",
+        "videoUrl": "https://videos.pexels.com/video-files/33271061/14173898_540_960_24fps.mp4",
+        "videoHdUrl": "https://videos.pexels.com/video-files/33271061/14173900_1080_1920_24fps.mp4",
+        "posterUrl": "https://images.pexels.com/videos/33271061/pictures/preview-0.jpg"
+      },
+      {
+        "id": "kv5",
+        "sortOrder": 5,
+        "published": true,
+        "title": "Steaming Rice Bowl",
+        "tag": "Plain Rice",
+        "description": "Simple, aromatic, perfectly cooked.",
+        "videoUrl": "https://videos.pexels.com/video-files/10200319/10200319-sd_540_960_25fps.mp4",
+        "videoHdUrl": "https://videos.pexels.com/video-files/10200319/10200319-hd_1080_1920_25fps.mp4",
+        "posterUrl": "https://images.pexels.com/videos/10200319/pexels-photo-10200319.jpeg"
+      },
+      {
+        "id": "kv6",
+        "sortOrder": 6,
+        "published": true,
+        "title": "Biryani Special",
+        "tag": "Biryani",
+        "description": "Festive plate with raita.",
+        "videoUrl": "https://videos.pexels.com/video-files/30044489/12888343_540_960_30fps.mp4",
+        "videoHdUrl": "https://videos.pexels.com/video-files/30044489/12888345_1080_1920_30fps.mp4",
+        "posterUrl": "https://images.pexels.com/videos/30044489/pictures/preview-0.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #1b3125;
+  --color-ink-2: #213a2c;
+  --color-ink-3: #2a4635;
+  --color-forest: #2e5540;
+  --color-ivory: #f9f4e7;
+  --color-cream: #f1e7cf;
+  --color-sand: #e2d3ae;
+  --color-gold: #c49a4c;
+  --color-gold-2: #e8cb8b;
+  --color-husk: #9d7430;
+  --color-pearl: #fffcf3;
+  --color-stone: #586a5c;
+  --color-mist: #a5b3a2;
+  --color-sage: #e9f0e0;
+  --color-sage-2: #d7e5ca;
+  --color-leaf: #6e9a58;
+
+  --font-display: var(--font-display-face), ui-serif, Georgia, serif;
+  --font-sans: var(--font-sans-face), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-scroll-dot: scroll-dot 2.2s var(--ease-in-out-quart) infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes scroll-dot {
+    0% { transform: translateY(0); opacity: 0; }
+    30% { opacity: 1; }
+    100% { transform: translateY(18px); opacity: 0; }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-padding-top: 6rem;
+  }
+  body {
+    background: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    overflow-x: clip;
+  }
+  ::selection {
+    background: var(--color-gold-2);
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  img, video {
+    max-width: 100%;
+  }
+}
+
+@utility container-x {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 48rem) {
+    padding-inline: 2.5rem;
+  }
+  @media (width >= 80rem) {
+    padding-inline: 4rem;
+  }
+}
+
+@utility display {
+  font-family: var(--font-display);
+  font-weight: 420;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+}
+
+@utility eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+@utility section-y {
+  padding-block: 6rem;
+  @media (width >= 64rem) {
+    padding-block: 9rem;
+  }
+}
+
+@utility glass-dark {
+  background: color-mix(in oklab, var(--color-ink) 62%, transparent);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+
+@utility glass-light {
+  background: color-mix(in oklab, var(--color-pearl) 90%, transparent);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+}
+
+/* Fine film grain used on dark cinematic sections. */
+@utility noise {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@utility hairline {
+  border-color: color-mix(in oklab, currentColor 14%, transparent);
+}
+
+@utility text-balance-pretty {
+  text-wrap: pretty;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Lenis smooth scrolling */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* ——— Admin UI primitives ——— */
+@utility admin-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid color-mix(in oklab, var(--color-ink) 14%, transparent);
+  background: #fff;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  &:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-gold) 25%, transparent);
+  }
+}
+@utility admin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in oklab, var(--color-ink) 15%, transparent);
+  background: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: background 0.2s, border-color 0.2s;
+  &:hover { border-color: var(--color-ink); }
+  &:disabled { opacity: 0.5; pointer-events: none; }
+}
+@utility admin-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: var(--color-ink);
+  color: var(--color-pearl);
+  padding: 0.65rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s;
+  &:hover { background: var(--color-forest); }
+  &:disabled { opacity: 0.5; pointer-events: none; }
+}
+@utility admin-card {
+  border-radius: 1.25rem;
+  border: 1px solid color-mix(in oklab, var(--color-ink) 8%, transparent);
+  background: #fff;
+}
+
+/* ——— Mill line machine animations (SVG) ——— */
+.ml-a { transform-box: fill-box; transform-origin: center; }
+.ml-o-bl { transform-box: fill-box; transform-origin: left bottom; }
+.ml-o-b { transform-box: fill-box; transform-origin: center bottom; }
+.ml-o-br { transform-box: fill-box; transform-origin: right bottom; }
+.ml-paused, .ml-paused * { animation-play-state: paused !important; }
+.ml-bay { transition: opacity 0.6s var(--ease-out-expo), filter 0.6s var(--ease-out-expo); }
+.ml-dim .ml-bay:not(.ml-on) { opacity: 0.38; filter: saturate(0.4); }
+
+@keyframes ml-spin { to { transform: rotate(360deg); } }
+@keyframes ml-spin-rev { to { transform: rotate(-360deg); } }
+@keyframes ml-flow { to { stroke-dashoffset: -24; } }
+@keyframes ml-flow-rev { to { stroke-dashoffset: 24; } }
+@keyframes ml-shake { 0%, 100% { transform: translate(0, 0); } 25% { transform: translate(2px, -1px); } 75% { transform: translate(-2px, 1px); } }
+@keyframes ml-fall {
+  0% { transform: translate(0, 0) rotate(var(--r, 0deg)); opacity: 0; }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { transform: translate(var(--dx, 0px), var(--dy, 100px)) rotate(var(--r2, 90deg)); opacity: 0; }
+}
+@keyframes ml-rise {
+  0% { transform: translate(0, 0) scale(0.6); opacity: 0; }
+  25% { opacity: 0.8; }
+  100% { transform: translate(var(--dx, 0px), var(--dy, -60px)) scale(1.4); opacity: 0; }
+}
+@keyframes ml-blink { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+@keyframes ml-scan { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(var(--dx, 120px)); } }
+@keyframes ml-bar { 0%, 100% { transform: scaleY(0.25); } 50% { transform: scaleY(1); } }
+@keyframes ml-bag { 0%, 30% { transform: translateX(0); opacity: 1; } 45%, 58% { transform: translateX(96px); } 82% { transform: translateX(200px); opacity: 1; } 100% { transform: translateX(250px); opacity: 0; } }
+@keyframes ml-bagfill { 0% { transform: scaleY(0.1); } 30%, 100% { transform: scaleY(1); } }
+@keyframes ml-needle { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(9px); } }
+@keyframes ml-bob { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(3px) rotate(0.8deg); } }
+@keyframes ml-wave { to { transform: translateX(-60px); } }
+@keyframes ml-tip { 0%, 15% { transform: rotate(0deg); } 40%, 75% { transform: rotate(-26deg); } 100% { transform: rotate(0deg); } }
+@keyframes ml-tip-rear { 0%, 15% { transform: rotate(0deg); } 40%, 75% { transform: rotate(24deg); } 100% { transform: rotate(0deg); } }
+@keyframes ml-pour { 0%, 38% { opacity: 0; } 45%, 72% { opacity: 1; } 80%, 100% { opacity: 0; } }
+@keyframes ml-puff { 0%, 70% { transform: scale(0); opacity: 0; } 78% { transform: scale(1); opacity: 0.9; } 100% { transform: scale(2); opacity: 0; } }
+@keyframes ml-pop { 0%, 12% { opacity: 0; transform: scale(0.5); } 22%, 88% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes ml-stack { 0% { opacity: 0; transform: translateY(-14px); } 8%, 92% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+@keyframes ml-slide { from { transform: translateX(0); } to { transform: translateX(var(--dx, 100px)); } }
+@keyframes ml-glow { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.9; } }
+@keyframes ml-crane { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-70px); } }
+@keyframes ml-hook { 0%, 20%, 80%, 100% { transform: translateY(0); } 40%, 60% { transform: translateY(46px); } }
+
+/* Ken Burns drift for photographs */
+@keyframes kenburns { 0% { transform: scale(1.08) translate(0, 0); } 100% { transform: scale(1.18) translate(-2%, -2%); } }
+.kenburns { animation: kenburns 18s ease-in-out infinite alternate; }
+
+/* Horizontal carousels without a visible scrollbar */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* ——— Brand intro (first view per session) ——— */
+.brand-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(90% 80% at 50% 45%, #3f6b51 0%, #24412f 55%, #1b3125 100%);
+  animation: bi-out 0.9s cubic-bezier(0.76, 0, 0.24, 1) 1.6s forwards;
+}
+.bi-word { clip-path: inset(0 100% 0 0); animation: bi-wipe 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; }
+.bi-line { width: 0; animation: bi-line 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards; }
+.bi-tag { opacity: 0; animation: bi-fade 0.8s ease 0.95s forwards; }
+@keyframes bi-wipe { to { clip-path: inset(0 0 0 0); } }
+@keyframes bi-line { to { width: 9rem; } }
+@keyframes bi-fade { to { opacity: 1; } }
+@keyframes bi-out { to { transform: translateY(-100%); visibility: hidden; } }
+.intro-seen .brand-intro { display: none; }
+@media (prefers-reduced-motion: reduce) { .brand-intro { display: none; } }
