@@ -1,0 +1,246 @@
+"use client";
+
+import { AnimatePresence, motion } from "motion/react";
+import { Mail, MessageCircle, Phone, Send, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { whatsappHref } from "@/lib/utils";
+import { SocialIcon } from "@/components/ui/social-icon";
+
+type Msg = { from: "bot" | "user"; text: string; quick?: QuickReply[] };
+type QuickReply = { label: string; answer: string; next?: QuickReply[] };
+
+const EASE = [0.16, 1, 0.3, 1] as const;
+
+/**
+ * Chat widget: floating bubble bottom-right that opens a panel with a scripted
+ * knowledge-base conversation (products, MOQ, shipping, samples, pricing),
+ * with instant handoff to WhatsApp / email / phone for anything that goes off-script.
+ */
+export function ChatWidget({ company }: { company: { name: string; whatsapp: string; email: string; phone: string } }) {
+  const [open, setOpen] = useState(false);
+  const [messages, setMessages] = useState<Msg[]>([]);
+  const [input, setInput] = useState("");
+  const [typing, setTyping] = useState(false);
+  const scrollerRef = useRef<HTMLDivElement | null>(null);
+  const name = company.name.replace(/^\[|\]$/g, "");
+
+  const QUICK: QuickReply[] = [
+    {
+      label: "What rice varieties do you offer?",
+      answer: "We export Basmati rice in multiple grades — ROYALE (1401 Steam), IMPERIAL, PRO, SELECT, CHOICE — plus specialty varieties. Each has distinct grain length, aroma and cooking character. Would you like a specific one?",
+      next: [
+        { label: "Tell me about ROYALE", answer: "ROYALE is our flagship 1401 Steam Basmati: 8.50–8.65 mm raw grain, 22–24 mm cooked, exceptional aroma and separation. Steam-processed to preserve fragrance. Perfect for fine-dining and premium retail." },
+        { label: "What's the price range?", answer: "Pricing depends on grade, packaging, order size and current market. For a formal quote with FOB/CIF rates to your destination, please request a quote or chat on WhatsApp." },
+      ],
+    },
+    {
+      label: "What is your minimum order quantity (MOQ)?",
+      answer: "Standard MOQ is 1 x 20ft FCL container (approx 24–26 MT). For LCL / mixed loads or trial shipments, speak with us on WhatsApp — we accommodate serious buyers.",
+    },
+    {
+      label: "Which countries do you export to?",
+      answer: "We ship to 25+ countries across the Middle East, Europe, Africa, Southeast Asia and the Americas. Regular routes include UAE, Saudi Arabia, Kuwait, UK, USA, Canada, Australia. Tell us your destination for shipping details.",
+    },
+    {
+      label: "How do I request a sample?",
+      answer: "Samples are available for serious buyers against courier charges. Share your company details, destination country and target variety — we'll courier a 1kg sample pack with full QC data.",
+    },
+    {
+      label: "What's the export process?",
+      answer: "1) Enquiry + sample  2) Quotation (FOB/CIF)  3) PI / Contract  4) 30% advance, 70% against BL  5) Production + QC  6) Container stuffing with photos  7) Shipment with full documentation (BL, Phyto, FSSAI, COO, etc.)",
+    },
+    {
+      label: "What certifications do you hold?",
+      answer: "ISO 9001:2015, FSSAI, APEDA registration, IEC, HACCP-aligned processing. Non-GMO verified sourcing. Full certification pack available on request.",
+    },
+  ];
+
+  const greet = (): Msg[] => [
+    { from: "bot", text: `Hi there — welcome to ${name}. I can answer quick questions about our rice, pricing, shipping or export process. What would you like to know?`, quick: QUICK },
+  ];
+
+  useEffect(() => {
+    if (open && messages.length === 0) setMessages(greet());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (el) el.scrollTop = el.scrollHeight;
+  }, [messages, typing]);
+
+  function send(q: QuickReply) {
+    setMessages((m) => [...m, { from: "user", text: q.label }]);
+    setTyping(true);
+    setTimeout(() => {
+      setTyping(false);
+      setMessages((m) => [...m, { from: "bot", text: q.answer, quick: q.next ?? QUICK }]);
+    }, 500 + Math.random() * 400);
+  }
+
+  function sendFree() {
+    const text = input.trim();
+    if (!text) return;
+    setMessages((m) => [...m, { from: "user", text }]);
+    setInput("");
+    setTyping(true);
+    setTimeout(() => {
+      setTyping(false);
+      setMessages((m) => [
+        ...m,
+        {
+          from: "bot",
+          text:
+            "Thanks — for a detailed reply, our export desk is best over WhatsApp or email. Tap below and we'll pick up straight away.",
+          quick: QUICK,
+        },
+      ]);
+    }, 600);
+  }
+
+  const wa = whatsappHref(company.whatsapp, `Hi ${name}, I'd like to discuss a rice export inquiry.`);
+
+  return (
+    <>
+      <motion.button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-label={open ? "Close chat" : "Open chat"}
+        className="pointer-events-auto fixed bottom-5 right-5 z-40 grid size-14 place-items-center rounded-full bg-ink text-pearl shadow-[0_18px_40px_-14px_rgba(0,0,0,0.6)] transition-transform hover:scale-105 sm:bottom-6 sm:right-6 sm:size-16"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.6, duration: 0.5, ease: EASE }}
+      >
+        <AnimatePresence mode="wait" initial={false}>
+          {open ? (
+            <motion.span key="x" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
+              <X className="size-6" />
+            </motion.span>
+          ) : (
+            <motion.span key="chat" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
+              <MessageCircle className="size-6" />
+            </motion.span>
+          )}
+        </AnimatePresence>
+        {!open && (
+          <span className="pointer-events-none absolute inset-0 animate-ping rounded-full bg-gold/40" aria-hidden />
+        )}
+      </motion.button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: 24, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 24, scale: 0.95 }}
+            transition={{ duration: 0.35, ease: EASE }}
+            role="dialog"
+            aria-label={`Chat with ${name}`}
+            className="pointer-events-auto fixed bottom-24 right-4 z-40 flex h-[560px] max-h-[80vh] w-[380px] max-w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-2xl bg-pearl shadow-[0_30px_80px_-30px_rgba(0,0,0,0.5)] ring-1 ring-ink/10 sm:right-6"
+          >
+            {/* Header */}
+            <div className="relative bg-ink px-5 py-4 text-pearl">
+              <div className="flex items-center gap-3">
+                <div className="grid size-9 place-items-center rounded-full bg-gold text-ink">
+                  <MessageCircle className="size-4" />
+                </div>
+                <div className="min-w-0">
+                  <div className="truncate text-sm font-semibold">{name} · Export Desk</div>
+                  <div className="flex items-center gap-1.5 text-[11px] text-pearl/70">
+                    <span className="relative flex size-2">
+                      <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                      <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
+                    </span>
+                    Online · typically replies within an hour
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Messages */}
+            <div ref={scrollerRef} className="flex-1 space-y-3 overflow-y-auto bg-pearl px-4 py-5">
+              {messages.map((m, i) => (
+                <div key={i} className={`flex ${m.from === "user" ? "justify-end" : "justify-start"}`}>
+                  <div className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${m.from === "user" ? "bg-ink text-pearl" : "bg-white text-ink ring-1 ring-ink/10"}`}>
+                    {m.text}
+                    {m.quick && m.from === "bot" && (
+                      <div className="mt-3 flex flex-col gap-1.5">
+                        {m.quick.map((q) => (
+                          <button
+                            key={q.label}
+                            type="button"
+                            onClick={() => send(q)}
+                            className="rounded-full border border-ink/15 bg-pearl px-3 py-1.5 text-left text-[12.5px] font-medium text-ink transition hover:border-gold hover:bg-gold/10"
+                          >
+                            {q.label}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+              {typing && (
+                <div className="flex justify-start">
+                  <div className="rounded-2xl bg-white px-4 py-3 ring-1 ring-ink/10">
+                    <span className="inline-flex gap-1">
+                      <span className="size-1.5 animate-bounce rounded-full bg-ink/50" style={{ animationDelay: "0ms" }} />
+                      <span className="size-1.5 animate-bounce rounded-full bg-ink/50" style={{ animationDelay: "150ms" }} />
+                      <span className="size-1.5 animate-bounce rounded-full bg-ink/50" style={{ animationDelay: "300ms" }} />
+                    </span>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Input */}
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                sendFree();
+              }}
+              className="flex items-center gap-2 border-t border-ink/10 bg-white px-3 py-2.5"
+            >
+              <input
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Type a message…"
+                className="flex-1 bg-transparent px-2 py-1.5 text-sm text-ink outline-none placeholder:text-stone/60"
+              />
+              <button
+                type="submit"
+                className="grid size-9 place-items-center rounded-full bg-ink text-pearl transition hover:bg-ink/90 disabled:opacity-40"
+                disabled={!input.trim()}
+                aria-label="Send"
+              >
+                <Send className="size-4" />
+              </button>
+            </form>
+
+            {/* Handoff bar */}
+            <div className="grid grid-cols-3 gap-px border-t border-ink/10 bg-ink/10 text-[11px] font-semibold text-ink">
+              {wa && (
+                <a href={wa} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-1.5 bg-pearl py-2.5 transition hover:bg-white">
+                  <SocialIcon platform="whatsapp" className="size-4" />
+                  WhatsApp
+                </a>
+              )}
+              {company.email && (
+                <a href={`mailto:${company.email}`} className="flex items-center justify-center gap-1.5 bg-pearl py-2.5 transition hover:bg-white">
+                  <Mail className="size-4" />
+                  Email
+                </a>
+              )}
+              {company.phone && (
+                <a href={`tel:${company.phone.replace(/\s+/g, "")}`} className="flex items-center justify-center gap-1.5 bg-pearl py-2.5 transition hover:bg-white">
+                  <Phone className="size-4" />
+                  Call
+                </a>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}

@@ -10,12 +10,12 @@ import { env } from "@/lib/env";
 import { organizationSchema, pageMetadata } from "@/lib/seo/metadata";
 import { BackToTop } from "@/components/layout/back-to-top";
 import { BrandIntro } from "@/components/layout/brand-intro";
-import { FloatingActions } from "@/components/layout/floating-actions";
 import { Footer } from "@/components/layout/footer";
 import { JsonLd } from "@/components/layout/json-ld";
 import { Navbar } from "@/components/layout/navbar";
 import { Providers } from "@/components/layout/providers";
 import { ScrollProgress } from "@/components/layout/scroll-progress";
+import { ChatWidget } from "@/components/chat/chat-widget";
 
 const display = Fraunces({ subsets: ["latin"], axes: ["opsz", "SOFT"], variable: "--font-display-face", display: "swap", preload: true, adjustFontFallback: true });
 const sans = Manrope({ subsets: ["latin"], variable: "--font-sans-face", display: "swap", preload: true, adjustFontFallback: true });
@@ -64,7 +64,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
             <Navbar company={{ name: company.name, logoUrl: company.logoUrl, logoDarkUrl: company.logoDarkUrl, phone: company.phone, email: company.email, whatsapp: company.whatsapp }} extras={navExtras} />
             <main id="main">{children}</main>
             <Footer content={content} dict={dict} locale={locale} />
-            <FloatingActions whatsapp={company.whatsapp} companyName={company.name} />
+            <ChatWidget company={{ name: company.name, whatsapp: company.whatsapp, email: company.email, phone: company.phone }} />
             <BackToTop />
           </Providers>
         </I18nProvider>

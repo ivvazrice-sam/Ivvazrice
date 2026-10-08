@@ -1,3 +1,4 @@
+import React from "react";
 import type { Dictionary } from "@/i18n/dictionaries/en";
 import type { ContentSnapshot } from "@/lib/content/types";
 import { cn, hasValue, showText } from "@/lib/utils";
@@ -7,6 +8,52 @@ import { MediaFrame } from "@/components/ui/media-frame";
 import { Parallax } from "@/components/ui/parallax";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/reveal";
 import { PlaceholderTag, SectionHeading } from "@/components/ui/section-heading";
+
+/**
+ * Visually accents the parts of a paragraph a buyer scans for first — numbers with units,
+ * explicit "{N}+ countries / varieties / years / tonnes" phrases, and known trade keywords.
+ * Keeps the sentence otherwise untouched; purely decorative emphasis.
+ */
+function highlightCopy(text: string): React.ReactNode {
+  const patterns: Array<{ re: RegExp; className: string }> = [
+    // "250+ MT per day", "9,000 MT", "25+ countries", "10+ years", percentages, ratios
+    { re: /\b\d{1,3}(?:,\d{3})*(?:\.\d+)?\s*(?:\+|\s*)?\s*(?:MT|tonnes?|tons?|kg|mm|%|countries|varieties|years?|days?|mills?)\b/gi, className: "font-semibold text-ink" },
+    // bare "25+" style ranges
+    { re: /\b\d{1,4}\+/g, className: "font-semibold text-ink" },
+    // key quality / trade phrases
+    { re: /\b(fine[\s-]dining(?:\s+restaurants?)?|premium\s+retail(?:\s+chains?)?|foodservice|importers?|basmati|non[\s-]GMO|HACCP|ISO\s*\d+(?::\d+)?|FSSAI|APEDA|IEC|single[\s-]origin|traceability|steam\s+basmati|pure[\s-]basmati|aromatic)\b/gi, className: "font-medium text-husk underline decoration-gold/60 decoration-2 underline-offset-4" },
+  ];
+
+  // Collect all matches with positions, then merge non-overlapping, highest-priority wins.
+  type Hit = { start: number; end: number; className: string };
+  const hits: Hit[] = [];
+  for (const { re, className } of patterns) {
+    for (const m of text.matchAll(re)) {
+      if (m.index == null) continue;
+      hits.push({ start: m.index, end: m.index + m[0].length, className });
+    }
+  }
+  hits.sort((a, b) => a.start - b.start || b.end - b.start - (a.end - a.start));
+  const merged: Hit[] = [];
+  for (const h of hits) {
+    if (merged.length && h.start < merged[merged.length - 1].end) continue;
+    merged.push(h);
+  }
+
+  const out: React.ReactNode[] = [];
+  let i = 0;
+  for (const h of merged) {
+    if (h.start > i) out.push(text.slice(i, h.start));
+    out.push(
+      <span key={`${h.start}-${h.end}`} className={h.className}>
+        {text.slice(h.start, h.end)}
+      </span>,
+    );
+    i = h.end;
+  }
+  if (i < text.length) out.push(text.slice(i));
+  return out;
+}
 
 export function AboutSection({ content, dict, detailed = false, moreHref }: { content: ContentSnapshot; dict: Dictionary; detailed?: boolean; /** Home-page teaser: first paragraph + stats + a link instead of the full story. */ moreHref?: string }) {
   const { company, settings } = content;
@@ -48,10 +95,10 @@ export function AboutSection({ content, dict, detailed = false, moreHref }: { co
 
         <div className="lg:col-span-6">
           <SectionHeading eyebrow={dict.about.eyebrow} title={dict.about.title} />
-          <div className="mt-10 space-y-5 text-[1.05rem] leading-[1.8] text-stone">
+          <div className="mt-10 space-y-5 text-[1.05rem] leading-[1.85] text-stone">
             {paragraphs.map((p, i) => (
               <Reveal key={i} delay={i * 0.05}>
-                <p>{p}</p>
+                <p className={i === 0 ? "border-l-2 border-gold/60 pl-5 text-[1.12rem] text-ink/90" : undefined}>{highlightCopy(p)}</p>
               </Reveal>
             ))}
           </div>

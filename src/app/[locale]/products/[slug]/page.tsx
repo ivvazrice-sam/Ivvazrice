@@ -133,6 +133,9 @@ export default async function ProductPage({ params }: PageProps<"/[locale]/produ
                 <ButtonLink href={href(`/quote?product=${product.slug}`)} variant="gold" size="lg" arrow className="flex-1 sm:flex-none">
                   {dict.cta.requestQuote}
                 </ButtonLink>
+                <ButtonLink href={href(`/products/${product.slug}/spec`)} variant="outline" size="lg" className="flex-1 sm:flex-none">
+                  Download spec (PDF)
+                </ButtonLink>
                 <ButtonLink href={href("/products")} variant="outline" size="lg" className="flex-1 sm:flex-none">
                   {dict.cta.viewAll}
                 </ButtonLink>
