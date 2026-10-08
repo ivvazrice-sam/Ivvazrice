@@ -43,12 +43,10 @@ export function ExpressionStudio({
   const { dict, href } = useI18n();
   const t = dict.range;
   const [active, setActive] = useState(0);
-  const [showCooked, setShowCooked] = useState(true);
   if (!expressions.length) return null;
   const e = expressions[Math.min(active, expressions.length - 1)];
   const value = (x: RiceExpression, k: MetricKey) => (k === "cookedLength" ? x.cookedLength || productCookedLength : x[k]);
   const raw = parseRange(e.avgLength);
-  const cooked = parseRange(value(e, "cookedLength"));
   const quoteHref = href(`/quote?product=${slug}&variant=${encodeURIComponent(e.name)}`);
 
   return (
@@ -172,18 +170,9 @@ export function ExpressionStudio({
                 <h3 className="font-display text-xl text-ink sm:text-2xl">{t.rulerTitle}</h3>
                 <p className="mt-1 text-xs text-stone">To-scale grain length visualization</p>
               </div>
-              {cooked && (
-                <label className="flex cursor-pointer items-center gap-3 text-sm font-semibold text-ink">
-                  <span className={cn("relative h-6 w-11 rounded-full transition-colors", showCooked ? "bg-leaf" : "bg-ink/15")}>
-                    <span className={cn("absolute top-0.5 size-5 rounded-full bg-white shadow transition-all", showCooked ? "left-[22px]" : "left-0.5")} />
-                  </span>
-                  <input type="checkbox" className="sr-only" checked={showCooked} onChange={(ev) => setShowCooked(ev.target.checked)} />
-                  {t.showCooked}
-                </label>
-              )}
             </div>
             <div className="mt-6">
-              <GrainRuler raw={raw} cooked={cooked} tone={e.tone} comparisons={comparisons} showCooked={showCooked} labels={{ raw: t.raw, cooked: t.cooked, elongation: t.elongation, mm: t.mm, compare: t.rulerCompare }} />
+              <GrainRuler raw={raw} tone={e.tone} comparisons={comparisons} labels={{ raw: t.raw, mm: t.mm, compare: t.rulerCompare }} />
             </div>
           </div>
         )}

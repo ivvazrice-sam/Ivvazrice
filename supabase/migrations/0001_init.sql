@@ -147,7 +147,7 @@ create table if not exists trust_items (
   id text primary key default gen_random_uuid()::text,
   sort_order int not null default 0,
   published boolean not null default false,
-  kind text not null check (kind in ('registration', 'export-document', 'buyer-logo', 'award', 'membership', 'association')),
+  kind text not null check (kind in ('registration', 'export-document', 'buyer-logo', 'award', 'membership', 'association', 'certification')),
   title text not null, description text default '', image_url text default '', url text default ''
 );
 

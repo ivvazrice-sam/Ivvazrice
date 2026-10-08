@@ -47,6 +47,27 @@ await run("settings", db.from("site_settings").upsert({ key: "global", value: se
 for (const [collection, table] of Object.entries(TABLES)) {
   const items = seed.collections[collection] ?? [];
   if (!items.length) continue;
-  await run(`${table} (${items.length})`, db.from(table).upsert(items.map((i) => toRow(i, ["images", "videos"]))));
+  await run(`${table} (${items.length})`, db.from(table).upsert(items.map((i) => toRow(i, ["images", "videos", "image"]))));
 }
+
+// Seed nested product_images and product_videos from each product's arrays.
+const productImages = [];
+const productVideos = [];
+for (const p of seed.collections.products ?? []) {
+  (p.images ?? []).forEach((img, idx) => {
+    productImages.push({ product_id: p.id, url: img.url ?? "", alt: img.alt ?? "", sort_order: img.sortOrder ?? idx });
+  });
+  (p.videos ?? []).forEach((v, idx) => {
+    productVideos.push({ product_id: p.id, title: v.title ?? "", provider: v.provider ?? "youtube", url: v.url ?? "", poster_url: v.posterUrl ?? "", sort_order: v.sortOrder ?? idx });
+  });
+}
+if (productImages.length) {
+  await run(`product_images (${productImages.length})`, db.from("product_images").delete().neq("product_id", "__none__"));
+  await run(`product_images insert (${productImages.length})`, db.from("product_images").insert(productImages));
+}
+if (productVideos.length) {
+  await run(`product_videos (${productVideos.length})`, db.from("product_videos").delete().neq("product_id", "__none__"));
+  await run(`product_videos insert (${productVideos.length})`, db.from("product_videos").insert(productVideos));
+}
+
 console.log("Done. Create an admin user in Supabase Auth and add it to admin_users (see migration file).");
