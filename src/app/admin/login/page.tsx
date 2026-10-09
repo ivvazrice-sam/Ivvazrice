@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import { authMode, getAdmin } from "@/lib/auth";
 import { LoginForm } from "@/components/admin/login-form";
-import { GrainArt } from "@/components/ui/grain-art";
+import { LoginRiceStage } from "@/components/admin/login-rice-stage";
 import { Logo } from "@/components/layout/logo";
 import { getStore } from "@/lib/content/store";
 
@@ -14,8 +14,8 @@ export default async function LoginPage() {
   return (
     <div className="grid min-h-screen lg:grid-cols-2">
       <div className="relative hidden overflow-hidden bg-ink lg:block">
-        <GrainArt seed="admin-login" tone="husk" background="dark" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
+        <LoginRiceStage />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
         <Logo name={company.name} logoUrl={company.logoUrl} height={48} className="absolute left-12 top-12" />
         <p className="display absolute bottom-12 left-12 max-w-md text-5xl text-pearl">
           Content &amp; <span className="italic text-gold-2">export desk.</span>
