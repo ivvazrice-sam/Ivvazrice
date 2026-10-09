@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Download, Search } from "lucide-react";
+import { ArrowRight, Download, Search } from "lucide-react";
 import { requireAdmin } from "@/lib/auth";
 import { getStore } from "@/lib/content/store";
 import { STATUS_STYLES } from "@/lib/admin/status-styles";
@@ -64,11 +64,12 @@ export default async function InquiriesPage({ searchParams }: PageProps<"/admin/
                 <th className="px-5 py-3 font-semibold">Product / quantity</th>
                 <th className="px-5 py-3 font-semibold">Status</th>
                 <th className="px-5 py-3 font-semibold">Received</th>
+                <th className="px-5 py-3 font-semibold text-right">Action</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-ink/5">
               {list.map((i) => (
-                <tr key={i.id} className="hover:bg-ivory/50">
+                <tr key={i.id} className="cursor-pointer transition-colors hover:bg-ivory/70">
                   <td className="px-5 py-3">
                     <Link href={`/admin/inquiries/${i.id}`} className="font-mono text-xs font-semibold hover:underline">
                       {i.reference}
@@ -89,6 +90,14 @@ export default async function InquiriesPage({ searchParams }: PageProps<"/admin/
                     <span className={cn("rounded-full px-2.5 py-1 text-xs font-semibold capitalize", STATUS_STYLES[i.status])}>{i.status}</span>
                   </td>
                   <td className="px-5 py-3 text-xs text-stone">{formatDate(i.createdAt)}</td>
+                  <td className="px-5 py-3 text-right">
+                    <Link
+                      href={`/admin/inquiries/${i.id}`}
+                      className="inline-flex items-center gap-1.5 rounded-full bg-ink px-3 py-1.5 text-xs font-semibold text-pearl transition hover:bg-ink/90"
+                    >
+                      View <ArrowRight className="size-3" />
+                    </Link>
+                  </td>
                 </tr>
               ))}
             </tbody>

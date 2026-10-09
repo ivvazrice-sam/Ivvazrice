@@ -18,15 +18,18 @@ export default async function MessagesPage() {
       {messages.length ? (
         <ul className="space-y-3">
           {messages.map((m) => (
-            <li key={m.id} className={cn("admin-card p-5", m.status === "archived" && "opacity-60")}>
+            <li key={m.id} className={cn("admin-card p-5 transition-all", m.status === "archived" && "opacity-60", m.status === "new" && "border-l-4 border-l-gold")}>
               <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <p className="font-semibold">
-                    {m.status === "new" && <span className="mr-2 inline-block size-2 rounded-full bg-gold" />}
-                    {m.subject || "(no subject)"}
-                  </p>
-                  <p className="mt-0.5 text-xs text-stone">
-                    {m.name} · {m.email} {m.phone && `· ${m.phone}`} · {formatDate(m.createdAt)}
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-2">
+                    {m.status === "new" && (
+                      <span className="rounded-full bg-gold/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-gold">New</span>
+                    )}
+                    <p className="font-semibold text-ink">{m.subject || "(no subject)"}</p>
+                  </div>
+                  <p className="mt-1 text-xs text-stone">
+                    From <span className="font-medium text-ink">{m.name}</span> · {m.email}
+                    {m.phone && ` · ${m.phone}`} · {formatDate(m.createdAt)}
                   </p>
                 </div>
                 <div className="flex gap-1">
