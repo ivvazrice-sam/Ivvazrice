@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Building2, ExternalLink, Inbox, LayoutDashboard, LogOut, Mail, Menu, Settings, X } from "lucide-react";
 import { logout } from "@/app/admin/actions";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/layout/logo";
 
 export interface SidebarProps {
   user: { email: string; role: string };
@@ -14,9 +15,10 @@ export interface SidebarProps {
   canLeads: boolean;
   canSettings: boolean;
   newLeads: number;
+  company: { name: string; logoUrl?: string; logoDarkUrl?: string };
 }
 
-export function Sidebar({ user, collections, canContent, canLeads, canSettings, newLeads }: SidebarProps) {
+export function Sidebar({ user, collections, canContent, canLeads, canSettings, newLeads, company }: SidebarProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const active = (href: string) => (href === "/admin" ? pathname === href : pathname.startsWith(href));
@@ -50,8 +52,22 @@ export function Sidebar({ user, collections, canContent, canLeads, canSettings, 
           open ? "translate-x-0 pt-20" : "-translate-x-full",
         )}
       >
-        <p className="px-3 font-display text-xl">Control room</p>
-        <nav className="mt-8 flex flex-1 flex-col gap-1">
+        <div className="flex items-center justify-between gap-3 px-3">
+          <Link href="/" aria-label={`${company.name} — Home`} className="block">
+            <Logo name={company.name} logoUrl={company.logoUrl} logoDarkUrl={company.logoDarkUrl} tone="light" height={28} />
+          </Link>
+        </div>
+        <p className="mt-5 px-3 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-pearl/40">Control room</p>
+        <a
+          href="/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 flex items-center gap-2 rounded-xl bg-pearl/5 px-3 py-2 text-[0.8rem] text-pearl/80 ring-1 ring-pearl/10 transition hover:bg-pearl/10 hover:text-pearl"
+        >
+          <ExternalLink className="size-4" />
+          View live website
+        </a>
+        <nav className="mt-6 flex flex-1 flex-col gap-1">
           {link("/admin", "Dashboard", LayoutDashboard)}
           {canLeads && link("/admin/inquiries", "Inquiries", Inbox, newLeads)}
           {canLeads && link("/admin/messages", "Messages", Mail)}
@@ -70,10 +86,7 @@ export function Sidebar({ user, collections, canContent, canLeads, canSettings, 
           )}
         </nav>
         <div className="mt-8 border-t border-pearl/10 pt-5">
-          <a href="/" target="_blank" className="flex items-center gap-2 px-3 text-xs text-pearl/55 hover:text-pearl">
-            <ExternalLink className="size-3.5" /> View website
-          </a>
-          <p className="mt-4 truncate px-3 text-xs text-pearl/40">
+          <p className="truncate px-3 text-xs text-pearl/40">
             {user.email} · {user.role}
           </p>
           <form action={logout}>
