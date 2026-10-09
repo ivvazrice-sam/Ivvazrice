@@ -71,7 +71,7 @@ export function Hero({ content }: { content: HeroContent }) {
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(22,42,30,0.97)_0%,rgba(22,42,30,0.90)_40%,rgba(22,42,30,0.55)_65%,rgba(22,42,30,0.15)_85%)] max-lg:bg-[linear-gradient(180deg,rgba(22,42,30,0.55)_0%,rgba(22,42,30,0.75)_40%,rgba(22,42,30,0.97)_100%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink to-transparent" />
 
-      <div className="container-x relative flex h-full flex-col justify-end pb-20 pt-36 max-[380px]:pt-28 lg:justify-center lg:pb-0 lg:pt-32">
+      <div className="container-x relative flex h-full flex-col justify-end pb-20 pt-[8.5rem] lg:justify-center lg:pb-0 lg:pt-32">
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}

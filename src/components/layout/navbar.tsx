@@ -219,7 +219,7 @@ export function Navbar({ company, extras }: { company: NavCompany; extras: NavEx
               }
             }}
           >
-            <Logo name={company.name} logoUrl={company.logoUrl} logoDarkUrl={company.logoDarkUrl} tone={open || (!scrolled && isHome) ? "light" : "dark"} height={scrolled ? 30 : 36} className="transition-[height] duration-500" />
+            <Logo name={company.name} logoUrl={company.logoUrl} logoDarkUrl={company.logoDarkUrl} tone={open || (!scrolled && isHome) ? "light" : "dark"} height={scrolled ? 26 : 30} className="transition-[height] duration-500" />
           </Link>
 
           <ul className="hidden items-center gap-0.5 xl:flex">
