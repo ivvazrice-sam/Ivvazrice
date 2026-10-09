@@ -5,6 +5,7 @@ import { COLLECTIONS } from "@/lib/admin/schema";
 import { getStore } from "@/lib/content/store";
 import { INQUIRY_STATUSES } from "@/lib/content/types";
 import { isEmailConfigured, isSupabaseConfigured } from "@/lib/env";
+import { getVisitorStats } from "@/lib/analytics/stats";
 import { formatDate, isPlaceholderText } from "@/lib/utils";
 import { PageHeader } from "@/components/admin/page-header";
 
@@ -14,13 +15,14 @@ export default async function Dashboard({ searchParams }: PageProps<"/admin">) {
   const user = await requireAdmin();
   const { denied } = await searchParams;
   const store = await getStore("admin");
-  const [company, settings, inquiries, products, countries, ...counts] = await Promise.all([
+  const [company, settings, inquiries, products, countries, visitors, counts] = await Promise.all([
     store.getCompany(),
     store.getSettings(),
     can(user, "leads") ? store.listInquiries() : Promise.resolve([]),
     store.list("products", { includeUnpublished: true }),
     store.list("exportCountries", { includeUnpublished: true }),
-    ...COLLECTIONS.map((c) => store.list(c.key, { includeUnpublished: true }).then((l) => l.length)),
+    getVisitorStats(),
+    Promise.all(COLLECTIONS.map((c) => store.list(c.key, { includeUnpublished: true }).then((l) => l.length))),
   ]);
 
   const checklist = [
@@ -52,6 +54,48 @@ export default async function Dashboard({ searchParams }: PageProps<"/admin">) {
             before launch.
           </p>
         </div>
+      )}
+
+      {visitors.configured && (
+        <section className="mb-10">
+          <div className="mb-3 flex items-baseline justify-between">
+            <h2 className="font-semibold">Website traffic</h2>
+            <span className="text-xs text-stone">Last 7 days</span>
+          </div>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="admin-card p-4">
+              <p className="text-xs text-stone">Visitors (total)</p>
+              <p className="mt-1 font-display text-3xl">{visitors.uniqueVisitors.toLocaleString()}</p>
+            </div>
+            <div className="admin-card p-4">
+              <p className="text-xs text-stone">Visitors today</p>
+              <p className="mt-1 font-display text-3xl">{visitors.visitorsToday.toLocaleString()}</p>
+            </div>
+            <div className="admin-card p-4">
+              <p className="text-xs text-stone">Page views (7d)</p>
+              <p className="mt-1 font-display text-3xl">{visitors.viewsLast7Days.toLocaleString()}</p>
+            </div>
+            <div className="admin-card p-4">
+              <p className="text-xs text-stone">Page views (total)</p>
+              <p className="mt-1 font-display text-3xl">{visitors.totalViews.toLocaleString()}</p>
+            </div>
+          </div>
+          {visitors.topPaths.length > 0 && (
+            <div className="admin-card mt-4 overflow-hidden">
+              <div className="flex items-center justify-between px-5 py-4">
+                <h3 className="text-sm font-semibold">Top pages (7 days)</h3>
+              </div>
+              <ul className="divide-y divide-ink/5 border-t border-ink/5">
+                {visitors.topPaths.map((p) => (
+                  <li key={p.path} className="flex items-center justify-between px-5 py-3 text-sm">
+                    <span className="font-mono text-xs text-stone">{p.path}</span>
+                    <span className="font-medium">{p.views.toLocaleString()}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </section>
       )}
 
       {can(user, "leads") && (

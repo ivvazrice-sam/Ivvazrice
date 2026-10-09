@@ -13,6 +13,7 @@ import { BrandIntro } from "@/components/layout/brand-intro";
 import { Footer } from "@/components/layout/footer";
 import { JsonLd } from "@/components/layout/json-ld";
 import { Navbar } from "@/components/layout/navbar";
+import { PageViewTracker } from "@/components/layout/page-view-tracker";
 import { Providers } from "@/components/layout/providers";
 import { ScrollProgress } from "@/components/layout/scroll-progress";
 import { ChatWidget } from "@/components/chat/chat-widget";
@@ -61,6 +62,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
         <I18nProvider locale={locale} dict={dict}>
           <Providers>
             <ScrollProgress />
+            <PageViewTracker />
             <Navbar company={{ name: company.name, logoUrl: company.logoUrl, logoDarkUrl: company.logoDarkUrl, phone: company.phone, email: company.email, whatsapp: company.whatsapp }} extras={navExtras} />
             <main id="main">{children}</main>
             <Footer content={content} dict={dict} locale={locale} />
