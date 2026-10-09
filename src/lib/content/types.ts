@@ -61,6 +61,11 @@ export interface SiteSettings {
   seoTitle: string;
   seoDescription: string;
   seoKeywords: string[];
+  /** Other names the business is known as — fed to Organization.alternateName so Google maps every query to this site. */
+  brandAliases?: string[];
+  /** Verification meta tags for search engines (paste the string from each console's HTML tag option). */
+  googleSiteVerification?: string;
+  bingSiteVerification?: string;
   ogImageUrl: string;
   twitterHandle: string;
   exportHeadline: string;

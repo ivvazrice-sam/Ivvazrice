@@ -1,7 +1,10 @@
 import { globalExportProps, loadPage } from "@/lib/page";
+import { faqSchema } from "@/lib/seo/metadata";
+import { JsonLd } from "@/components/layout/json-ld";
 import { MillTeaser } from "@/components/mill/mill-experience";
 import { AboutSection } from "@/components/sections/about";
 import { FaqSection } from "@/components/sections/faq";
+import { FAQS } from "@/components/sections/faq-data";
 import { GlobalExport } from "@/components/sections/global-export";
 import { Hero } from "@/components/sections/hero";
 import { HomeExplore } from "@/components/sections/home-explore";
@@ -75,6 +78,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       />
       <TestimonialsSection items={collections.testimonials} />
       <FaqSection />
+      <JsonLd data={faqSchema(FAQS)} />
     </>
   );
 }

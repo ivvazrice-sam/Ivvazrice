@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 import { getProductBySlug, getSiteContent } from "@/lib/content/queries";
 import { breadcrumbs, loadPage } from "@/lib/page";
-import { pageMetadata, productSchema } from "@/lib/seo/metadata";
+import { pageMetadata, productKeywords, productSchema } from "@/lib/seo/metadata";
 import { hasValue, showText } from "@/lib/utils";
 import { JsonLd } from "@/components/layout/json-ld";
 import { ButtonLink } from "@/components/ui/button";
@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/products
     title: [product.name, hasValue(product.variety) ? product.variety : ""].filter(Boolean).join(" — "),
     description: product.shortDescription || product.overview.slice(0, 160),
     image: product.images[0]?.url,
+    extraKeywords: productKeywords(product),
   });
 }
 

@@ -7,7 +7,7 @@ import { I18nProvider } from "@/i18n/client";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { getSiteContent } from "@/lib/content/queries";
 import { env } from "@/lib/env";
-import { organizationSchema, pageMetadata } from "@/lib/seo/metadata";
+import { organizationSchema, pageMetadata, websiteSchema } from "@/lib/seo/metadata";
 import { BackToTop } from "@/components/layout/back-to-top";
 import { BrandIntro } from "@/components/layout/brand-intro";
 import { Footer } from "@/components/layout/footer";
@@ -69,6 +69,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
           </Providers>
         </I18nProvider>
         <JsonLd data={organizationSchema(content)} />
+        <JsonLd data={websiteSchema(content)} />
       </body>
     </html>
   );
