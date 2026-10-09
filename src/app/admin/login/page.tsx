@@ -33,7 +33,6 @@ export default async function LoginPage() {
           ) : (
             <LoginForm />
           )}
-          <p className="mt-8 text-xs text-stone">Mode: {mode === "supabase" ? "Supabase Auth" : mode === "local" ? "Local credentials" : "Not configured"}</p>
         </div>
       </div>
     </div>
