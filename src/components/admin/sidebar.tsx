@@ -7,6 +7,7 @@ import { Building2, ExternalLink, Inbox, LayoutDashboard, LogOut, Mail, Menu, Se
 import { logout } from "@/app/admin/actions";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/layout/logo";
+import { InquiryNotifier } from "@/components/admin/inquiry-notifier";
 
 export interface SidebarProps {
   user: { email: string; role: string };
@@ -41,7 +42,9 @@ export function Sidebar({ user, collections, canContent, canLeads, canSettings, 
   return (
     <>
       <div className="sticky top-0 z-40 flex items-center justify-between bg-ink px-5 py-3 text-pearl lg:hidden">
-        <span className="font-display text-lg">Admin</span>
+        <Link href="/admin" aria-label={`${company.name} — Dashboard`} className="flex items-center">
+          <Logo name={company.name} logoUrl={company.logoUrl} logoDarkUrl={company.logoDarkUrl} tone="light" height={24} />
+        </Link>
         <button type="button" onClick={() => setOpen((o) => !o)} aria-label="Menu" className="grid size-10 place-items-center">
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
         </button>
@@ -86,7 +89,8 @@ export function Sidebar({ user, collections, canContent, canLeads, canSettings, 
           )}
         </nav>
         <div className="mt-8 border-t border-pearl/10 pt-5">
-          <p className="truncate px-3 text-xs text-pearl/40">
+          {canLeads && <InquiryNotifier />}
+          <p className="mt-4 truncate px-3 text-xs text-pearl/40">
             {user.email} · {user.role}
           </p>
           <form action={logout}>
