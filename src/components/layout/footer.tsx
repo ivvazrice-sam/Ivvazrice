@@ -81,6 +81,12 @@ export function Footer({ content, dict, locale }: { content: ContentSnapshot; di
           <div className="lg:col-span-4">
             <Logo name={company.name} logoUrl={company.logoUrl} height={44} />
             {showText(company.shortDescription, sp) && <p className="mt-6 max-w-sm text-sm leading-relaxed text-pearl/55">{company.shortDescription}</p>}
+            {(settings.brandAliases ?? []).filter((a) => a && a.trim()).length > 0 && (
+              <p className="mt-5 max-w-sm text-xs leading-relaxed text-pearl/40">
+                <span className="text-pearl/60">Also known as</span>{" "}
+                {(settings.brandAliases ?? []).filter((a) => a && a.trim()).join(" · ")}
+              </p>
+            )}
             {contacts.length > 0 && (
               <ul className="mt-8 space-y-3 text-sm text-pearl/70">
                 {contacts.map((c, i) => (

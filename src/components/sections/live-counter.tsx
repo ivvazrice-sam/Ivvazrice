@@ -60,7 +60,7 @@ export function LiveCounter({ items }: { items: Item[] }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10% 0px" }}
               transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col items-center text-center sm:items-start sm:text-left"
+              className="flex flex-col items-center text-center"
             >
               <Icon className="mb-3 size-5 text-gold" aria-hidden />
               <div className="font-display text-4xl font-semibold text-pearl sm:text-5xl">
