@@ -71,7 +71,7 @@ export function Hero({ content }: { content: HeroContent }) {
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(22,42,30,0.97)_0%,rgba(22,42,30,0.90)_40%,rgba(22,42,30,0.55)_65%,rgba(22,42,30,0.15)_85%)] max-lg:bg-[linear-gradient(180deg,rgba(22,42,30,0.55)_0%,rgba(22,42,30,0.75)_40%,rgba(22,42,30,0.97)_100%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink to-transparent" />
 
-      <div className="container-x relative flex h-full flex-col justify-end pb-24 pt-32 lg:justify-center lg:pb-0">
+      <div className="container-x relative flex h-full flex-col justify-end pb-20 pt-36 max-[380px]:pt-28 lg:justify-center lg:pb-0 lg:pt-32">
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ export function Hero({ content }: { content: HeroContent }) {
           {content.foundedYear && <span className="text-pearl/60">· Est. {content.foundedYear}</span>}
         </motion.p>
 
-        <h1 className="mt-6 max-w-4xl font-display text-[3rem] font-medium leading-[0.98] tracking-[-0.025em] [text-shadow:0_4px_30px_rgba(8,20,12,0.95),0_2px_10px_rgba(8,20,12,0.8)] sm:text-7xl lg:text-[min(6.4rem,11.5vh)]">
+        <h1 className="mt-8 max-w-4xl font-display text-[2.5rem] font-medium leading-[1.02] tracking-[-0.025em] [text-shadow:0_4px_30px_rgba(8,20,12,0.95),0_2px_10px_rgba(8,20,12,0.8)] sm:mt-6 sm:text-7xl sm:leading-[0.98] lg:text-[min(6.4rem,11.5vh)]">
           {lines.map((line, i) => (
             <span key={i} className="block overflow-hidden pb-[0.06em]">
               <motion.span
