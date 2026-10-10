@@ -78,24 +78,68 @@ export function ChatWidget({ company }: { company: { name: string; whatsapp: str
     }, 500 + Math.random() * 400);
   }
 
+  function matchReply(text: string): QuickReply | null {
+    const t = text.toLowerCase();
+    const has = (...kw: string[]) => kw.some((k) => t.includes(k));
+    if (has("price", "rate", "cost", "quote", "quotation", "fob", "cif")) {
+      return { label: "Pricing", answer: "Pricing depends on grade, packaging, order size and current market. For a formal FOB/CIF quote to your destination, please request a quote or chat on WhatsApp — we'll share rates the same day." };
+    }
+    if (has("moq", "minimum", "min order", "container", "fcl", "lcl")) {
+      return { label: "MOQ", answer: "Standard MOQ is 1 x 20ft FCL container (approx 24–26 MT). For LCL or trial loads, speak with us on WhatsApp — we accommodate serious buyers." };
+    }
+    if (has("sample")) {
+      return { label: "Samples", answer: "Samples are available for serious buyers against courier charges. Share your company details, destination country and target variety — we'll courier a 1kg sample pack with full QC data." };
+    }
+    if (has("ship", "deliver", "lead time", "transit", "port")) {
+      return { label: "Shipping", answer: "We ship from Mundra / Nhava Sheva. Typical production + stuffing is 10–14 days after PI, then sea transit by lane (e.g. Dubai ~5 days, UK ~20, USA east ~28). Share your destination for an exact lane." };
+    }
+    if (has("payment", "advance", "bl", "lc", "letter of credit")) {
+      return { label: "Payment", answer: "Standard terms: 30% advance on PI, 70% against scanned BL. We also work with LC at sight for established buyers. Full documentation included (BL, Phyto, FSSAI, COO, etc.)." };
+    }
+    if (has("certif", "iso", "fssai", "apeda", "haccp", "non-gmo")) {
+      return { label: "Certifications", answer: "ISO 9001:2015, FSSAI, APEDA registration, IEC, HACCP-aligned processing. Non-GMO verified sourcing. Full certification pack available on request." };
+    }
+    if (has("country", "export", "destination", "where")) {
+      return { label: "Export countries", answer: "We ship to 25+ countries across the Middle East, Europe, Africa, Southeast Asia and the Americas. Regular routes include UAE, Saudi Arabia, Kuwait, UK, USA, Canada and Australia. Tell us your destination for shipping details." };
+    }
+    if (has("basmati", "rice", "variety", "grade", "royale", "imperial", "1121", "1401")) {
+      return { label: "Varieties", answer: "We export Basmati rice in multiple grades — ROYALE (1401 Steam), IMPERIAL, PRO, SELECT, CHOICE — plus specialty varieties. Each has distinct grain length, aroma and cooking character. Tell us the grade you're looking at." };
+    }
+    if (has("package", "packaging", "bag", "jute", "pp", "box", "label", "private")) {
+      return { label: "Packaging", answer: "Standard packs: 1kg / 5kg / 10kg / 20kg / 25kg in jute, PP woven or non-woven bags, plus printed consumer cartons. Private-label and custom print are supported — share artwork and quantity." };
+    }
+    if (has("contact", "address", "office", "visit", "mill")) {
+      return { label: "Contact", answer: `You can reach us by WhatsApp, email or phone — buttons below open each one. Mill visits are welcome by appointment.` };
+    }
+    if (has("hi", "hello", "hey", "namaste", "salaam", "assalam")) {
+      return { label: "Hi", answer: `Hi — welcome to ${name}. Ask me about varieties, pricing, MOQ, samples, shipping or certifications, or tap a quick question below.` };
+    }
+    if (has("thanks", "thank you", "shukriya")) {
+      return { label: "Thanks", answer: "You're welcome. If you'd like to move forward, request a quote or hop onto WhatsApp — our export desk will take it from there." };
+    }
+    return null;
+  }
+
   function sendFree() {
     const text = input.trim();
     if (!text) return;
     setMessages((m) => [...m, { from: "user", text }]);
     setInput("");
     setTyping(true);
+    const match = matchReply(text);
     setTimeout(() => {
       setTyping(false);
       setMessages((m) => [
         ...m,
-        {
-          from: "bot",
-          text:
-            "Thanks — for a detailed reply, our export desk is best over WhatsApp or email. Tap below and we'll pick up straight away.",
-          quick: QUICK,
-        },
+        match
+          ? { from: "bot", text: match.answer, quick: QUICK }
+          : {
+              from: "bot",
+              text: `Thanks for your message — I didn't catch that exactly. For a detailed reply, our export desk is best over WhatsApp or email (buttons below). Or pick one of these:`,
+              quick: QUICK,
+            },
       ]);
-    }, 600);
+    }, 500 + Math.random() * 400);
   }
 
   const wa = whatsappHref(company.whatsapp, `Hi ${name}, I'd like to discuss a rice export inquiry.`);
@@ -166,7 +210,7 @@ export function ChatWidget({ company }: { company: { name: string; whatsapp: str
                 <div className="grid size-9 place-items-center rounded-full bg-gold text-ink">
                   <MessageCircle className="size-4" />
                 </div>
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <div className="truncate text-sm font-semibold">{name} · Export Desk</div>
                   <div className="flex items-center gap-1.5 text-[11px] text-pearl/70">
                     <span className="relative flex size-2">
@@ -176,30 +220,40 @@ export function ChatWidget({ company }: { company: { name: string; whatsapp: str
                     Online · typically replies within an hour
                   </div>
                 </div>
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  aria-label="Close chat"
+                  className="grid size-8 place-items-center rounded-full text-pearl/70 transition hover:bg-pearl/10 hover:text-pearl"
+                >
+                  <X className="size-4" />
+                </button>
               </div>
             </div>
 
             {/* Messages */}
             <div ref={scrollerRef} className="flex-1 space-y-3 overflow-y-auto bg-pearl px-4 py-5">
               {messages.map((m, i) => (
-                <div key={i} className={`flex ${m.from === "user" ? "justify-end" : "justify-start"}`}>
-                  <div className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${m.from === "user" ? "bg-ink text-pearl" : "bg-white text-ink ring-1 ring-ink/10"}`}>
-                    {m.text}
-                    {m.quick && m.from === "bot" && (
-                      <div className="mt-3 flex flex-col gap-1.5">
-                        {m.quick.map((q) => (
-                          <button
-                            key={q.label}
-                            type="button"
-                            onClick={() => send(q)}
-                            className="rounded-full border border-ink/15 bg-pearl px-3 py-1.5 text-left text-[12.5px] font-medium text-ink transition hover:border-gold hover:bg-gold/10"
-                          >
-                            {q.label}
-                          </button>
-                        ))}
-                      </div>
-                    )}
+                <div key={i} className="space-y-2">
+                  <div className={`flex ${m.from === "user" ? "justify-end" : "justify-start"}`}>
+                    <div className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${m.from === "user" ? "bg-ink text-pearl" : "bg-white text-ink ring-1 ring-ink/10"}`}>
+                      {m.text}
+                    </div>
                   </div>
+                  {m.quick && m.from === "bot" && (
+                    <div className="flex flex-wrap gap-1.5 pl-1">
+                      {m.quick.map((q) => (
+                        <button
+                          key={q.label}
+                          type="button"
+                          onClick={() => send(q)}
+                          className="rounded-full border border-ink/15 bg-white px-3 py-1.5 text-left text-[12.5px] font-medium text-ink transition hover:border-gold hover:bg-gold/10"
+                        >
+                          {q.label}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
               {typing && (
